@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  margin-top: 8px;
+}
+
+.logo {
+  width: 9%;
+  margin-top: 0.81vw;
+  margin-left: 1.25vw;
+}
+
+.top-main {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 75%;
+  /* max-height: 96vh; */
+  height: clamp(94vh, 93vh, 0%);
+  justify-content: space-between;
+  }
+  
+  @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .top-main {
+      height: clamp(93vh, 92vh, 0%);
+        height: calc(var(--vh, 1vh) * 93);
+    }
+   .image-container {
+      display: flex;
+      justify-content: space-between;
+    }
+    .image-container img {
+      object-fit: contain;
+      width: 100%;
+    }
+    .other-hovering {
+      object-fit: fill;
+      height: 100%;
+      flex-shrink: 1;
+    }
+      .image-container:hover .front-side,
+      .image-container:hover .back-side {
+        display: block;
+        width: 50%;
+      }
+    }
+    .image-container.other-hovering .front-side {
+      display: none;
+    }
+    .image-container.other-hovering .no-hover {
+      display: block;
+    }
+    .center:hover + .left {
+      opacity: 50%;
+    }
+
+
+
+  .image-container {
+    display: flex;
+    justify-content: space-between;
+   
+  }
+
+
+  .image-container img {
+    object-fit: contain;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 751px) {
+    .image-container:hover .front-side,
+    .image-container:hover .back-side {
+      display: block;
+      width: 50%;
+    }
+  }
+
+
+  .back-side {
+    display: none;
+  }
+  .no-hover {
+    display: none;
+  }
+
+  .other-hovering {
+    .front-side {
+      display: none;
+    }
+    .no-hover {
+      display: block;
+    }
+  }
+
+
+.copy {
+  margin-top: 7vh;
+  padding-left: 4.86vw;
+  font-weight: bold;
+  letter-spacing: 0.26em;
+  white-space: nowrap;
+  font-size: 47px;
+}
+
+@keyframes infinity-scroll-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.scroll-infinity {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* スクロールバーの幅を考慮して調整 */
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.scroll-infinity__wrap {
+  display: flex;
+  animation: infinity-scroll-right 40s linear infinite;
+  width: 100%;
+}
+
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-infinity__item {
+  flex: 0 0 auto; /* アイテムが自動で縮まないように */
+  width: calc(100vw / 6); /* 各アイテムの幅を調整 */
+  padding-right: 4.41vw; /* アイテム間のスペースを確保 */
+}
+
+.scroll-infinity__item img {
+  width: 100%;
+  display: block; /* 画像の余白を除去 */
+}
+
+.scroll-infinity__wrap:active {
+  animation-play-state: paused;
+}
+
+.footer {
+  font-size: 1.84vw;
+  font-weight: bold;
+  padding: 0 3.68vw;
+  margin-top: 4.41vw;
+  display: flex;
+  margin-right: 0;
+}
+
+.left-content {
+  display: flex;
+}
+
+.goods {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 20px;
+  margin-left: 0px;
+  padding-left: 0;
+  font-size: 40px;
+  text-align: left;
+}
+.left-container {
+  display: flex;
+}
+
+.goods a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.rank {
+  font-size: 18px;
+  margin-left: 0;
+  color: rgb(0, 255, 0);
+  /* padding-top: 47px; */
+  /* 他のドレッシングの味が追加された時に下記を削除し使用する */
+  padding-top: 53px;
+}
+
+.rank p {
+  margin-bottom: 58px;
+}
+
+.goods a:hover {
+  -webkit-text-stroke: 0.3px yellow;
+  text-decoration: line-through;
+}
+
+.about-goods {
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  white-space: nowrap;
+  margin-left: 6.03vw;
+  padding-top: 64px;
+}
+.about-com {
+  display: flex;
+}
+.com-sns {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-goods p {
+  margin: 0;
+}
+
+.about-goods a {
+  list-style: none;
+  text-decoration: none;
+  color: gray;
+  padding-top: 20px;
+}
+
+.about-goods a:hover {
+  color: black;
+}
+
+.nav {
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-bottom: 15px;
+  width: 100%;
+  white-space: nowrap;
+  padding-top: 64px;
+}
+
+.nav p {
+  margin: 0;
+}
+
+.nav a {
+  list-style: none;
+  text-decoration: none;
+  color: gray;
+  padding-top: 20px;
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  color: black;
+}
+
+.com-sns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 6.7vw;
+}
+
+.SNS {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  margin-right: 6.03vw;
+  margin-left: -1.7px;
+}
+
+.SNS img {
+  width: 38px;
+  margin-right: 0px;
+  padding-top: 0px;
+}
+
+.youtube:hover {
+  opacity: 60%;
+}
+
+.X:hover {
+  opacity: 60%;
+}
+
+.instagram:hover {
+  opacity: 60%;
+}
+
+.cominfo {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  font-size: 16px;
+  padding-top: 21px;
+  font-weight: 600;
+}
+.cominfo p {
+  line-height: 66px;
+  margin-top: 21px;
+}
+
+footer {
+  width: 90%;
+  margin: 0 3.68vw;
+  margin-bottom: 30px;
+  margin-top: 68px;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+footer h3 {
+  font-size: 14px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.back {
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 1006px) {
+  .footer {
+    flex-direction: column;
+  }
+  .comname {
+    margin-left: 12px;
+  }
+  .scroll-infinity__item {
+    width: calc(100vw / 5); /* 各アイテムの幅を調整 */
+  }
+}
+
+@media screen and (max-width: 890px) {
+  @media screen and (min-height: 600px) {
+    .main {
+      height: 72vh;
+    }
+    .copy {
+      font-size: 5.82vw;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .main {
+    height: 50vh;
+  }
+  .copy {
+    font-size: 5.82vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .SNS {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    transition: 0s;
+    margin-left: 4.86vw;
+    /* margin-left: 30px; */
+    /* 商品についてが追加された際下記を削除し使用する */
+    margin-left: 9px;
+  }
+  .com-sns {
+    /* margin-left: 96px; */
+    /* 商品についてが追加された場合下記を削除し使用する */
+    margin-left: 0;
+  }
+  .SNS img {
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .slider::-webkit-scrollbar {
+    display: block;
+  }
+
+  .slider-card {
+    width: 30%;
+  }
+  .left-content {
+    flex-direction: column;
+  }
+  .about-goods {
+    padding-top: 0;
+    margin-left: 0;
+    padding-left: 10px;
+  }
+  .nav {
+    padding-top: 0;
+    /* margin-left: 30px; */
+    /* 商品についてが追加された際下記を削除し使用する */
+    margin-left: 12px;
+  }
+  .comname {
+    font-size: 16px;
+  }
+  .scroll-infinity__item {
+    width: calc(200vw / 6);
+  }
+  .scroll-__wrap {
+    width: calc(150%); /* コンテンツの幅に合わせて設定 */
+    animation: infinity-scroll-right 20s linear infinite;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo {
+    width: 15%;
+    margin-left: 3.2vw;
+  }
+  .main {
+    margin-top: 12px;
+    height: 330px;
+  }
+  .copy {
+    font-size: 6.88vw;
+    margin-left: -3px;
+    margin-top: 36px;
+  }
+  .goods {
+    font-size: 30px;
+    padding-top: 30px;
+  }
+  .about-goods {
+    margin-left: -10px;
+  }
+  .rank {
+    padding-top: 30px;
+  }
+  .rank p {
+    margin-bottom: 40px;
+  }
+
+  .cominfo .comname {
+    line-height: 40px;
+  }
+}
