@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.logo {
+    width: 9%;
+    margin-top: 0.81vw;
+    margin-left: 1.25vw;
+}
+
+#greet {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    margin-top: 48px;
+}
+
+#greet img {
+    width: 52%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12.8vw;
+    margin-top: -20px;
+    text-align: left;
+}
+
+.container p {
+    font-size: 20px;
+    letter-spacing: 4px;
+    padding-top: 42px;
+    line-height: 46px;
+    font-weight: 500;
+    width: 74.4vw;
+    text-align: justify;
+    margin-top: -30px;
+}
+
+.comtitle {
+    text-align: left;
+    margin-left: 12.8vw;
+}
+
+.comtitle h1 {
+    font-size: 3.6vw;
+    letter-spacing: 1.2vw;
+    margin: 0;
+    margin-top: 14px;
+    line-height: 6vw;
+}
+
+.name {
+    text-align: left;
+    font-size: 2vw;
+    line-height: 40px;
+    white-space: nowrap;
+    font-weight: 300;
+}
+
+.name p {
+    margin-top: 0.5vw;
+}
+
+.ceoimage {
+    margin-left: 12.8vw;
+    text-align: left;
+}
+
+.ceoimage img {
+    width: 36%;
+    border: solid 2.3vw #f9f9f9;
+}
+
+#companyinfo {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    padding: 0 12.8vw;
+    margin-top: 60px;
+}
+
+#companyinfo h1 {
+    height: 100%;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.yokoyama {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #d9d9d9;
+    padding-bottom: 5px;
+    align-items: flex-end;
+    font-weight: 500;
+}
+
+.yokoyama2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.yokoyama3 {
+    font-size: 15px;
+    color: rgb(0, 255, 0);
+    margin: 0;
+}

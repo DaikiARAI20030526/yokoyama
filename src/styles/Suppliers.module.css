@@ -1,0 +1,46 @@
+.supplier {
+    padding: 0 12.6vw;
+}
+
+.supplier h1 {
+    height: 100%;
+    font-size: 30px;
+    margin-bottom: 48px;
+    margin-top: 18vh;
+}
+
+.suppliercontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 12.8vw;
+    word-wrap: break-word;
+}
+
+.suppliername {
+    padding: 4 4vw;
+    word-wrap: break-word;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.suppliername p {
+    text-align: center;
+    font-size: 16px;
+    line-height: 3.07vw;
+    margin-bottom: 28px;
+}
+
+.supplierimg {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.supplierimg img {
+    width: 18%;
+    margin: auto;
+    height: 18%;
+}

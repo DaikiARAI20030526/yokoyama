@@ -1,11 +1,15 @@
-import React from 'react'
-import "../products.css";
+import React from 'react';
+import styles from "../styles/Products.module.css"; // CSSモジュールの適用
+
 const Products = () => {
   return (
-    <div className="main">
-    <a href=""><img src="img/TONGARI両面.jpg" alt="" srcset=""></img></a>
-</div>
-  )
-}
+    <div className={styles.main}>
+      <a href="#">
+        <img src="img/TONGARI両面.jpg" alt="TONGARI 両面" />
+      </a>
+    </div>
+  );
+};
 
-export default Products
+export default Products;
+// CSSモジュールの適用

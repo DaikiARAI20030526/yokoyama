@@ -4,8 +4,7 @@ html {
     scroll-behavior: smooth;
 }
 
-
-body{
+body {
     width: 100%;
     font-family: "Noto Sans JP", sans-serif;
     margin: 0;
@@ -18,21 +17,16 @@ body{
     margin-left: 1.25vw;
 }
 
-
 #greet {
     width: 100%;
     display: flex;
     text-align: center;
-
     margin-top: 48px;
-
 }
 
 #greet img {
     width: 52%;
-    
 }
-
 
 .container {
     display: flex;
@@ -40,9 +34,9 @@ body{
     padding: 0 12.8vw;
     margin-top: -20px;
     text-align: left;
-
 }
-.container p{
+
+.container p {
     font-size: 20px;
     letter-spacing: 4px;
     padding-top: 42px;
@@ -51,20 +45,18 @@ body{
     width: 74.4vw;
     text-align: justify;
     margin-top: -30px;
-    
 }
-.com-title {
+
+.comTitle {
     text-align: left;
     margin-left: 12.8vw;
- 
-
-
 }
-.com-title h1{
+
+.comTitle h1 {
     font-size: 3.6vw;
     letter-spacing: 1.2vw;
     margin: 0;
-    margin-top :14px;
+    margin-top: 14px;
     line-height: 6vw;
 }
 
@@ -74,39 +66,36 @@ body{
     line-height: 40px;
     white-space: nowrap;
     font-weight: 300;
-
 }
 
-.name P {
-    margin-top:0.5vw;
+.name p {
+    margin-top: 0.5vw;
 }
 
-.ceoimage {
+.ceoImage {
     margin-left: 12.8vw;
-text-align: left;
-
-    
+    text-align: left;
 }
 
-.ceoimage img {
+.ceoImage img {
     width: 36%;
     border: solid 2.3vw #f9f9f9;
 }
-#company-info{
+
+#companyInfo {
     white-space: nowrap;
     display: flex;
     flex-direction: column;
     padding: 0 12.8vw;
     margin-top: 60px;
 }
-#company-info h1 {
+
+#companyInfo h1 {
     height: 100%;
     font-size: 40px;
     margin-bottom: 60px;
-    
-
-
 }
+
 .yokoyama {
     display: flex;
     justify-content: space-between;
@@ -115,16 +104,19 @@ text-align: left;
     align-items: flex-end;
     font-weight: 500;
 }
+
 .yokoyama2 {
     font-size: 20px;
     margin: 0;
     font-weight: 500;
 }
+
 .yokoyama3 {
     font-size: 15px;
     color: rgb(0, 255, 0);
     margin: 0;
 }
+
 .place {
     display: flex;
     justify-content: space-between;
@@ -134,20 +126,19 @@ text-align: left;
     padding-top: 61px;
     font-weight: 500;
 }
+
 .place2 {
     font-size: 20px;
     margin: 0;
     font-weight: 500;
-    
 }
+
 .place3 {
     font-size: 15px;
     color: rgb(0, 255, 0);
     margin: 0;
-    
-    
-    
 }
+
 .date {
     display: flex;
     justify-content: space-between;
@@ -157,16 +148,19 @@ text-align: left;
     padding-top: 78px;
     font-weight: 500;
 }
+
 .date2 {
     font-size: 20px;
     margin: 0;
     font-weight: 500;
 }
+
 .date3 {
     font-size: 15px;
     color: rgb(0, 255, 0);
     margin: 0;
 }
+
 .project {
     display: flex;
     justify-content: space-between;
@@ -176,16 +170,19 @@ text-align: left;
     padding-top: 78px;
     font-weight: 500;
 }
+
 .project2 {
     font-size: 20px;
     margin: 0;
     font-weight: 500;
 }
+
 .project3 {
     font-size: 15px;
     color: rgb(0, 255, 0);
     margin: 0;
 }
+
 .bank {
     display: flex;
     justify-content: space-between;
@@ -195,80 +192,72 @@ text-align: left;
     padding-top: 78px;
     font-weight: 500;
 }
+
 .bank2 {
     font-size: 20px;
     margin: 0;
     font-weight: 500;
 }
+
 .bank3 {
     font-size: 15px;
     color: rgb(0, 255, 0);
     margin: 0;
 }
 
-
-
-
-
-.supplier{
+.supplier {
     padding: 0 12.6vw;
 }
-
 
 .supplier h1 {
     height: 100%;
     font-size: 30px;
     margin-bottom: 48px;
     margin-top: 18vh;
-   
-
 }
 
-.supplier-content{
+.supplierContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 12.8vw;
-     word-wrap: break-word;
-}
-.supplier-name {
-padding: 4 4vw;
-word-wrap: break-word;
-margin: 0 auto;
-align-items: center;
+    word-wrap: break-word;
 }
 
-.S_span{
+.supplierName {
+    padding: 4 4vw;
+    word-wrap: break-word;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.SSpan {
     display: inline-block;
     padding-top: 1.1vh;
-    }
+}
 
-.supplier-name p {
+.supplierName p {
     text-align: center;
     font-size: 16px;
     line-height: 3.07vw;
     margin-bottom: 28px;
-
 }
 
-.supplier-img{
+.supplierImg {
     display: flex;
-width: 100%;
-align-items: center;
-margin-left: auto;
+    width: 100%;
+    align-items: center;
+    margin-left: auto;
     margin-right: auto;
-  
 }
-.supplier-img img{
+
+.supplierImg img {
     display: flex;
     justify-content: center;
-    width:18%;
-    margin: auto;
     width: 18%;
+    margin: auto;
     height: 18%;
 }
-
-
 
 .footer {
     font-size: 1.84vw;
@@ -279,10 +268,9 @@ margin-left: auto;
     margin-right: 0;
 }
 
-.left-content {
+.leftContent {
     display: flex;
 }
-
 
 .goods {
     display: flex;
@@ -293,7 +281,8 @@ margin-left: auto;
     font-size: 40px;
     text-align: left;
 }
-.left-container{
+
+.leftContainer {
     display: flex;
 }
 
@@ -307,7 +296,6 @@ margin-left: auto;
 .rank {
     font-size: 18px;
     color: rgb(0, 255, 0);
-    /* padding-top: 47px; */
     padding-top: 53px;
 }
 
@@ -320,7 +308,7 @@ margin-left: auto;
     text-decoration: line-through;
 }
 
-.about-goods {
+.aboutGoods {
     font-size: 18px;
     display: flex;
     flex-direction: column;
@@ -329,27 +317,28 @@ margin-left: auto;
     margin-left: 6.03vw;
     padding-top: 60px;
 }
-.about-com{
-    display: flex;
 
+.aboutCom {
+    display: flex;
 }
-.com-sns{
+
+.comSns {
     display: flex;
     flex-direction: column;
 }
 
-.about-goods p {
+.aboutGoods p {
     margin: 0;
 }
 
-.about-goods a {
+.aboutGoods a {
     list-style: none;
     text-decoration: none;
     color: gray;
     padding-top: 20px;
 }
 
-.about-goods a:hover {
+.aboutGoods a:hover {
     color: black;
 }
 
@@ -380,11 +369,10 @@ margin-left: auto;
     color: black;
 }
 
-.com-sns {
+.comSns {
     display: flex;
     flex-direction: column;
     margin-left: 6.7vw;
-    
 }
 
 .SNS {
@@ -403,271 +391,40 @@ margin-left: auto;
     padding-top: 0px;
 }
 
-.youtube:hover {
-    opacity: 60%;
-}
-
-.X:hover {
-    opacity: 60%;
-}
-
+.youtube:hover,
+.X:hover,
 .instagram:hover {
     opacity: 60%;
 }
 
-.cominfo {
+.comInfo {
     display: flex;
     flex-direction: column;
     white-space: nowrap;
     font-size: 16px;
-  padding-top: 21px;
-  font-weight: 600;
+    padding-top: 21px;
+    font-weight: 600;
 }
 
-
-.cominfo p{
+.comInfo p {
     line-height: 66px;
     margin-top: 21px;
 }
 
 footer {
     width: 90%;
-    margin:0 3.68vw;
+    margin: 0 3.68vw;
     margin-bottom: 30px;
     margin-top: 68px;
-    
-}
-        
-        
-        
-    
-    .footer-text {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-       width: 100%;
-    }
-    
-    footer a {
-        text-decoration: none;
-        color: black;
-        font-size: 14px;
-        width: 100%;
-        white-space: nowrap;
-    }
-    
-    footer h3 {
-        font-size: 14px;
-        width: 100%;
-        white-space: nowrap;
-    }
-    
-    .back {
-        padding-top: 15px;
-        
-    }
-    @media screen and (max-width: 1039px){
-        .footer{
-            flex-direction: column;
-           }
-           .comname{
-            margin-left: 12px;
-        }
-    }
-
-
-    @media screen and (max-width: 800px){
-        
-        .section{
-            font-size: 15px;
-            line-height: 50px;
-        }
-        .footer{
-            flex-direction: column;
-           }
-
-        .supplier-img {
-            display: flex;
-        }
-           
-         
-    }
-        @media screen and (max-width: 650px){
-            
-            .com-title{
-                margin-bottom: 0;}
-        
-            .com-title .name {
-                margin-bottom: 0;
-            }
-
-              #greet {
-                margin-top: 0;
-              }
-          .container p{
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            line-height: 30px;
-            margin: 0;
-          }         
-        .ceoimage img {
-            width: 40%;
-        }
-        #company-info h1 {
-            font-size: 30px;
-        }
-        .supplier-name p{
-            font-size: 12px;
-        }
-       
-        .left-content{
-            flex-direction: column;
-        }
-        .footer{
-            flex-direction: column;
-           }
-           .about-goods{
-            padding-top: 0;
-            margin-left: 0;
-            padding-left: 10px;
-        }
-        .com-sns{
-            /* margin-left: 96px; */
-    /* 商品についてが追加されたら表示する */
-    margin-left: 0;
-        }
-
-
-        .nav{
-            padding-top: 0;
-            /* margin-left: 30px; */
-            /* 商品についてが追加されたら表示する */
-            margin-left: 12px;
-        }
-        .SNS{
-            /* margin-left: 30px; */
-            /* 商品についてが追加されたら表示する */
-            margin-left: 9px;
-        }
-        .cominfo p {
-            font-size: 16px;
-        }
-        .yokoyama2{
-            font-size: 14px;
-        }
-        .place2{
-            font-size: 14px;
-        }
-        .date2{
-            font-size: 14px;
-        }
-        .project2{
-            font-size: 14px;
-        }
-        .bank2{
-            font-size: 14px;
-        }
-    }
-    
-    @media screen and (max-width: 450px){
-        .logo {
-            width: 15%;
-            margin-left:3.2vw;
-        }
-
-        .title h1{
-            font-size: 4vw;
-            letter-spacing: 0.23em;
-            line-height: 6.7vw;
-        }
-        .name p{
-            margin-top: 0.2vw;
-        }
-
-        .yokoyama3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-  
-        .place3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-
-        .date3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-    
-        .project3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-
-        
-        .bank3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-        
-        
-        .goods{
-            font-size: 30px;
-            padding-top: 30px;
-            
-        }
-        .about-goods{
-            margin-left: -10px;
-        }
-        .rank {
-            padding-top:30px;
-        }
-        #company-info{
-            white-space: nowrap;
-            display: flex;
-            flex-direction: column;
-            padding: 0 12.8vw;
-            margin-top: 32px;
-        }
-        .rank p{
-        margin-bottom: 40px;
-        }
-       
-        .cominfo .comname {
-            line-height: 40px;
-        }
-        .container br {
-            display: none;
-        }
-        #company-info h1 {
-            margin-bottom: 40px; 
-    }
-      .supplier h1 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        margin-top: 72px;
-      }
-      
-.supplier-name {
-        font-size: 6px;
-    }
 }
 
+.footerText {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 600;
+}
 
-.place{
-   padding-top: 42px;
-}
-.date{
-    padding-top: 42px;
-}
-.project{
-    padding-top: 42px;
-}
-.bank{
-    padding-top: 42px;
+.footerText p {
+    margin: 0;
 }
