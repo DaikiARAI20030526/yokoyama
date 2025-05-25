@@ -1,0 +1,357 @@
+/* tyogo.module.css */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  width: 40%;
+  margin-left: 1.25vw;
+  margin-top: 0.81vw;
+}
+
+.header {
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw 1vw;
+}
+
+.title {
+  writing-mode: vertical-rl;
+  font-size: 32px;
+  color: #00FF26;
+  border: 2px solid;
+  letter-spacing: 10px;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0.81vw 1vw 0;
+  padding: 0;
+  z-index: 999;
+}
+
+@keyframes infinity-scroll-right {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.scroll-infinity__wrap {
+  display: flex;
+  width: 200%;
+  animation: infinity-scroll-right 20s linear infinite;
+}
+
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-infinity__item {
+  flex: 0 0 auto;
+  width: calc(100vw / 8);
+}
+
+.scroll-infinity__item img {
+  height: 30vw;
+  display: block;
+}
+
+.scroll-infinity__wrap:active {
+  animation-play-state: paused;
+}
+
+.bottle1 {
+  transform: rotate(14.85deg);
+}
+.bottle2 {
+  transform: rotate(-10.54deg);
+  margin-left: 4vw;
+  margin-top: 24vw;
+}
+.bottle3 {
+  transform: rotate(-96.95deg);
+  margin-left: 8vw;
+}
+.bottle4 {
+  transform: rotate(22.31deg);
+  margin-left: 4vw;
+  margin-top: 22vw;
+}
+.bottle5 {
+  transform: rotate(-14.28deg);
+  margin-left: 8vw;
+  margin-top: 20vw;
+}
+.bottle6 {
+  transform: rotate(-34.02deg);
+}
+.bottle7 {
+  transform: rotate(32.72deg);
+  margin-left: 8vw;
+}
+.bottle8 {
+  transform: rotate(-54.1deg);
+  margin-left: 4vw;
+  margin-top: 30vw;
+}
+
+.bottle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  margin: 2vw 0;
+}
+
+.today-title p {
+  font-size: 24px;
+  margin: 0 0 1vw;
+}
+
+.today {
+  padding: 2vw 1vw;
+}
+
+.today-container {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  flex-wrap: wrap;
+}
+
+.today-text-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 400px;
+}
+
+.today-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.today-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.today-caption {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+.go-recipe {
+  text-decoration: none;
+  color: #00FF26;
+  font-size: 16px;
+}
+
+.today-img-container img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.recipe-container {
+  padding: 2vw 1vw;
+}
+
+.recipe-list-title p {
+  font-size: 24px;
+  margin: 0 0 1vw;
+}
+
+.recipelist-warpper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vw;
+}
+
+.recipe {
+  width: calc(33.333% - 1.333vw);
+  position: relative;
+}
+
+.recipe-img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.recipe-img-container img {
+  width: 100%;
+  display: block;
+}
+
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.recipe-img-container:hover .hover-img {
+  opacity: 1;
+}
+
+.hover-text {
+  position: absolute;
+  bottom: 0.5vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5vw 1vw;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.recipe-text-container {
+  text-align: center;
+  margin-top: 1vw;
+}
+
+.recipe-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.recipe-caption {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.bottle-bottom {
+  padding: 2vw 1vw;
+}
+
+.bottle-img-container {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.footer {
+  background: #f9f9f9;
+  padding: 2vw 1vw;
+}
+
+.left-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+.goods a {
+  margin-right: 1vw;
+  text-decoration: none;
+  color: inherit;
+}
+
+.rank p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.about-com {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4vw;
+  margin-top: 1vw;
+}
+
+.nav p {
+  margin: 0 0 0.5vw;
+  font-weight: bold;
+}
+
+.nav a {
+  display: block;
+  margin-bottom: 0.5vw;
+  text-decoration: none;
+  color: #333;
+}
+
+.SNS {
+  display: flex;
+  gap: 1vw;
+}
+
+.youtube img,
+.X img,
+.instagram img {
+  width: 24px;
+  height: auto;
+}
+
+.cominfo {
+  text-align: center;
+  margin-top: 2vw;
+}
+
+.comname {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1vw;
+  border-top: 1px solid #ddd;
+}
+
+.copyright h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.back a {
+  text-decoration: none;
+  color: #00FF26;
+}

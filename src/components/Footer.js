@@ -1,3 +1,4 @@
+// Footer.jsx
 import React from 'react';
 import styles from "../styles/Footer.module.css";
 import { Link } from 'react-router-dom';
@@ -19,7 +20,9 @@ const Footer = () => {
               {/* <p>2</p> */}
             </div>
           </div>
+
           <div className={styles.aboutcom}>
+            {/* 会社について */}
             <div className={styles.comsns}>
               <div className={styles.nav}>
                 <p>会社について</p>
@@ -45,8 +48,24 @@ const Footer = () => {
                 </div>
               </div>
             </div>
+
+            {/* 商品について */}
+            <div className={styles.aboutgoods}>
+              <p>商品について</p>
+              <a
+                href="https://retailer.orosy.com/wholesale/c210c4eb-1197-4f5b-bb32-b673e6005b9b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                バイヤーの方はこちら
+              </a>
+              <Link to="/tyogo">
+                レシピはこちら
+              </Link>
+            </div>
           </div>
         </div>
+
         <div className={styles.cominfo}>
           <p className={styles.comname}>
             株式会社YOKOYAMA<br />
@@ -55,6 +74,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
       <footer>
         <div className={styles.footertext}>
           <div className={styles.copyright}>

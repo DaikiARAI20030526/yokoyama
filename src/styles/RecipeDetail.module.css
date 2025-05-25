@@ -1,0 +1,136 @@
+/* src/styles/RecipeDetail.module.css */
+.container {
+    display: flex;
+    gap: 6%;
+  }
+  
+  .left {
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px 0 0 60px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .logo {
+    width: 20%;             /* ロゴ幅 20% */
+  }
+  
+  .mainImage {
+    width: 100%;
+    border: 10px solid #f8f8f8;
+  }
+  
+  .hoverWrapper {
+    margin-top: 20px;
+    text-align: left;
+  }
+  
+  .hoverWrapper h2 {
+    font-size: 40px;
+    margin: 0 0 10px 0;
+    white-space: nowrap;
+  }
+  
+  .hoverImage {
+    width: 100px;
+  }
+  
+  .dressingList {
+    padding-left: 0;        /* ul パディング削除 */
+    list-style: none;       /* li マーカー削除 */
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+  }
+  
+  .symbol {
+    color: #888;
+    margin-left: 4px;
+  }
+  
+  .right {
+    flex: 1;
+    padding-right: 60px;
+  }
+  
+  #text {
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 70px;
+    margin: 0;
+  }
+  
+  .section {
+    margin-top: 30px;
+  }
+  
+  .seasoningList,
+  .procedureList {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .seasoningList li,
+  .procedureList li {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .seasonCount,
+  .procCount {
+    font-size: 30px;
+  }
+  
+  .seasoningText,
+  .procedureText {
+    padding-left: 20px;
+    font-size: 30px;
+    flex: 1;
+  }
+  
+  /* レスポンシブ */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      gap: 0;
+    }
+    .left {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .logo {
+      width: 40%;
+      margin: 0 auto;
+    }
+    .mainImage {
+      width: 100%;
+    }
+    .hoverImage {
+      width: 30%;
+    }
+    .hoverWrapper h2,
+    .dressingList {
+      white-space: normal;
+      flex-wrap: wrap;
+    }
+    .right {
+      padding-right: 20px;
+      font-size: 14px;
+    }
+    .title {
+      font-size: 50px;
+    }
+    .seasoningText,
+    .procedureText {
+      font-size: 16px;
+    }
+  }
+  

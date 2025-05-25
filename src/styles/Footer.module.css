@@ -302,12 +302,44 @@ body {
   opacity: 60%;
 }
 
+/* Footer.module.css */
+/* 既存のスタイルはそのままに、.aboutgoods を活用します */
+
+.aboutgoods {
+  font-size: 17px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  white-space: nowrap;
+  margin-left: 0;
+  padding-top: 64px;
+}
+
+.aboutgoods p {
+  font-weight: bold;
+}
+
+.aboutgoods a,
+.aboutgoods a:visited,
+.aboutgoods a:link {
+  text-decoration: none;
+  color: gray;
+  padding-top: 20px;
+  transition: color 0.2s;
+}
+
+.aboutgoods a:hover {
+  color: black;
+}
+
+
 .cominfo {
   display: flex;
   flex-direction: column;
   white-space: nowrap;
   font-size: 16px;
   padding-top: 21px;
+  padding-left: 6vw;
   font-weight: 600;
 }
 .cominfo p {

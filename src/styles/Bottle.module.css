@@ -1,0 +1,13 @@
+/*
+—— Bottle.module.css ——
+*/
+.bottle {
+    margin-left: 20px;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 0 20px 0 10px;
+  }
+  .img {
+    height: 12vw;
+  }

@@ -1,0 +1,15 @@
+/*
+—— BottleBottom.module.css ——
+*/
+.bottleBottom {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .imgContainer {
+    text-align: center;
+  }
+  .imgContainer img {
+    height: 40vw;
+    margin-right: 100px;
+  }

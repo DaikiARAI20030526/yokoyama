@@ -1,70 +1,60 @@
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Top from "./components/Top";
-import Copy from "./components/Copy";
-import Slider from "./components/Slider";
-import Products from "./components/Products";
-import "./styles.css";
-import "./products.css";
-import "./company.css";
-import Interview from "./components/Interview";
-import Caption from "./components/Caption";
-import Company from "./components/Company";
-import Companyimg from "./components/Companyimg";
-import Companycopy from "./components/Companycopy";
-import Companyinfo from "./components/Companyinfo";
-import Suppliers from "./components/Suppliers";
-import ScrollToTop from "./components/ScrollToTop";
+// src/App.js
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop'
 
-function App() {
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+import Top from './components/Top'
+import Copy from './components/Copy'
+import Slider from './components/Slider'
+
+import Products from './components/Products'
+import Caption from './components/Caption'
+import Interview from './components/Interview'
+
+import Company from './components/Company'
+import Companyimg from './components/Companyimg'
+import Companycopy from './components/Companycopy'
+import Companyinfo from './components/Companyinfo'
+import Suppliers from './components/Suppliers'
+
+import Headers from './components/Headers'
+import Sliders from './components/Sliders'
+import Today from './components/Today'
+import RecipeContainer from './components/RecipeContainer'
+import RecipeDetail    from './components/RecipeDetail'
+
+import './styles.css'
+import './products.css'
+import './company.css'
+
+function AppContent() {
+  const { pathname } = useLocation()
+  // /tyogo/〜 かつさらにパスが続く場合だけヘッダーを隠す
+  const hideHeader = /^\/tyogo\/[^/]+$/.test(pathname)
+
   return (
-    <Router>
-      <ScrollToTop /> {/* ✅ ここに追加 */}
-      <div className="App">
-        <Header />
-        <Routes>
-          {/* トップページ */}
-          <Route
-            path="/"
-            element={
-              <>
-                <Top />
-                <Copy />
-                <Slider />
-              </>
-            }
-          />
-
-          {/* 商品ページ */}
-          <Route
-            path="/products"
-            element={
-              <>
-                <Products />
-                <Caption />
-                <Interview />
-                <Slider />
-              </>
-            }
-          />
-          <Route
-            path="/company"
-            element={
-              <>
-                <Company />
-                <Companyimg />
-                <Companycopy />
-                <Companyinfo />
-                <Suppliers />
-              </>
-            }
-          />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
-  );
+    <div className="App">
+      {!hideHeader && <Header />}
+      <Routes>
+        <Route path="/" element={<><Top /><Copy /><Slider /></>} />
+        <Route path="/products" element={<><Products /><Caption /><Interview /><Slider /></>} />
+        <Route path="/company" element={<><Company /><Companyimg /><Companycopy /><Companyinfo /><Suppliers /></>} />
+        <Route path="/tyogo" element={<><Headers /><Sliders /><Today /><RecipeContainer /></>} />
+        <Route path="/tyogo/:slug" element={<RecipeDetail />} />
+      </Routes>
+      <Footer />
+    </div>
+  )
 }
 
-export default App;
+export default function App() {
+  return (
+    <Router>
+      <ScrollToTop />
+      <AppContent />
+    </Router>
+  )
+}

@@ -1,3 +1,5 @@
+/* src/styles/Header.module.css */
+
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap");
 
 :global(html) {
@@ -11,232 +13,59 @@
   margin-top: 8px;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
 .logo {
-  width: 9%;
-  margin-top: 0.81vw;
+  width: 40%;       /* ロゴ幅を40%に */
   margin-left: 1.25vw;
+  margin-top: 9.5px;
 }
 
-.topMain {
+.today {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 75%;
-  height: clamp(94vh, 93vh, 0%);
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 9.5px;
+  padding-right: 45%;
 }
 
-@supports (-webkit-appearance:none) and (stroke-color:transparent) {
-  .topMain {
-    height: clamp(93vh, 92vh, 0%);
-    height: calc(var(--vh, 1vh) * 93);
-  }
-}
-
-.imageContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.imageContainer img {
-  object-fit: contain;
-  width: 100%;
-}
-
-.imageContainer:hover .frontSide,
-.imageContainer:hover .backSide {
-  display: block;
-  width: 50%;
-}
-
-.imageContainer.otherHovering .frontSide {
-  display: none;
-}
-
-.imageContainer.otherHovering .noHover {
-  display: block;
-}
-
-.center:hover + .left {
-  opacity: 50%;
-}
-
-.backSide {
-  display: none;
-}
-
-.noHover {
-  display: none;
-}
-
-.copy {
-  margin-top: 7vh;
-  padding-left: 4.86vw;
-  font-weight: bold;
-  letter-spacing: 0.26em;
-  white-space: nowrap;
-  font-size: 47px;
-}
-
-@keyframes infinityScrollRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.slider {
-  width: 100%;
-  overflow: hidden;
-}
-
-.scrollInfinity {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-
-.scrollInfinityWrap {
-  display: flex;
-  animation: infinityScrollRight 40s linear infinite;
-  width: 100%;
-}
-
-.scrollInfinityList {
-  display: flex;
-  list-style: none;
-  padding: 0;
+.date p,
+.title p {
   margin: 0;
-}
-
-.scrollInfinityItem {
-  flex: 0 0 auto;
-  width: calc(100vw / 6);
-  padding-right: 4.41vw;
-}
-
-.scrollInfinityItem img {
-  width: 100%;
-  display: block;
-}
-
-.scrollInfinityWrap:active {
-  animation-play-state: paused;
-}
-
-.footer {
-  font-size: 1.84vw;
-  font-weight: bold;
-  padding: 0 3.68vw;
-  margin-top: 4.41vw;
-  display: flex;
-  margin-right: 0;
-}
-
-.leftContent {
-  display: flex;
-}
-
-.goods {
-  display: flex;
-  flex-direction: column;
-  padding: 45px 20px;
-  font-size: 40px;
-  text-align: left;
-}
-
-.goods a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-}
-
-.rank {
-  font-size: 18px;
-  color: rgb(0, 255, 0);
-  padding-top: 53px;
-}
-
-.goods a:hover {
-  -webkit-text-stroke: 0.3px yellow;
-  text-decoration: line-through;
-}
-
-.aboutGoods {
-  font-size: 17px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  white-space: nowrap;
-  margin-left: 6.03vw;
-  padding-top: 64px;
-}
-
-.comSns {
-  display: flex;
-  flex-direction: column;
-  margin-left: 6.7vw;
-}
-
-.sns {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  margin-left: -1.7px;
-}
-
-.sns img {
-  width: 38px;
-}
-
-.youtube:hover,
-.x:hover,
-.instagram:hover {
-  opacity: 60%;
-}
-
-.cominfo {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-  font-size: 16px;
-  padding-top: 21px;
+  font-size: 10px;
   font-weight: 600;
-}
-
-.cominfo p {
-  line-height: 66px;
-  margin-top: 21px;
+  letter-spacing: 0.45em;
 }
 
 @media screen and (max-width: 1006px) {
-  .footer {
-    flex-direction: column;
+  .logo {
+    width: 40%;
+    padding-left: 47%;
+  }
+  .date p,
+  .title p {
+    font-size: 10px;
+    font-weight: 600;
   }
 }
 
 @media screen and (max-width: 450px) {
   .logo {
-    width: 15%;
-    margin-left: 3.2vw;
+    width: 40%;
+    padding-left: 47%;
   }
-  .copy {
-    font-size: 6.88vw;
-    margin-top: 36px;
+  .today {
+    gap: 2px;
   }
-  .goods {
-    font-size: 30px;
-    padding-top: 30px;
-  }
-  .rank {
-    padding-top: 30px;
-  }
-  .cominfo .comname {
-    line-height: 40px;
+  .date p,
+  .title p {
+    font-size: 10px;
+    font-weight: 600;
   }
 }
