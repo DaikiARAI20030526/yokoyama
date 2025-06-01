@@ -33,4 +33,3 @@ const Slider = () => {
 };
 
 export default Slider;
-// CSSモジュールを使用しているため、スタイルはSlider.module.cssに記述してください。

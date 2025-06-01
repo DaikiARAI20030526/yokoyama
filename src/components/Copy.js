@@ -6,7 +6,8 @@ const Copy = () => {
     <p className={styles.copy} style={{ marginBottom: "36px" }}>
       かけて！煮て！<br />
       混ぜて！焼いて！<br />
-      漬けて！炊いて！
+      漬けて！炊いて！<br />
+      YOKOYAMAは万能ソースの専門メーカーです。
     </p>
   );
 };

@@ -1,136 +1,149 @@
 /* src/styles/RecipeDetail.module.css */
 .container {
-    display: flex;
-    gap: 6%;
-  }
-  
-  .left {
-    width: 400px;
-    height: 100vh;
-    display: flex;
+  display: flex;
+  gap: 2%;
+}
+
+/* 左カラムを 70% 幅にし、パディングを削除 */
+.left {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+/* 左カラム内のリンクに幅とマージンを設定 */
+
+
+/* mainImage の幅を 90%、ボーダーを削除 */
+.mainImage {
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+}
+
+/* hoverWrapper は右カラムに配置されるのでそのまま */
+.hoverWrapper {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.hoverWrapper h2 {
+  font-size: 40px;
+  margin: 0 0 10px 0;
+  white-space: nowrap;
+}
+
+.hoverImage {
+  width: 100px;
+}
+
+.dressingList {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.symbol {
+  color: #888;
+  margin-left: 4px;
+}
+
+/* 右カラムを 20% 幅にし、個別スクロールを無効化 */
+.right {
+  width: 35%;
+  padding-right: 60px;
+  overflow: visible;
+}
+.right h1{
+  margin: 0 ;
+}
+
+/* right 内の h2 のフォントサイズを 18px に設定 */
+.right h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.section {
+  margin-top: 30px;
+}
+
+/* 調味料リストのマージンボトムを 12px に変更 */
+.seasoningList {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 12px;
+}
+
+.procedureList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.seasoningList li,
+.procedureList li {
+  display: flex;
+  gap: 10px;
+}
+
+.seasonCount {
+  font-size: 18px;
+}
+
+.seasoningText,
+.procedureText {
+  padding-left: 20px;
+  font-size: 18px;
+  flex: 1;
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .container {
     flex-direction: column;
-    justify-content: space-between;
-    padding: 24px 0 0 60px;
-    position: sticky;
-    top: 0;
+    gap: 0;
   }
-  
+  .left {
+    width: 100%;
+    padding: 0;
+  }
+  .left a {
+    width: 40%;
+    margin-left: 20px;
+    margin-top: 9.5px;
+  }
   .logo {
-    width: 20%;             /* ロゴ幅 20% */
+    width: 40%;
+    margin: 0 auto;
   }
-  
   .mainImage {
     width: 100%;
-    border: 10px solid #f8f8f8;
   }
-  
-  .hoverWrapper {
-    margin-top: 20px;
-    text-align: left;
-  }
-  
-  .hoverWrapper h2 {
-    font-size: 40px;
-    margin: 0 0 10px 0;
-    white-space: nowrap;
-  }
-  
   .hoverImage {
-    width: 100px;
+    width: 30%;
   }
-  
+  .hoverWrapper h2,
   .dressingList {
-    padding-left: 0;        /* ul パディング削除 */
-    list-style: none;       /* li マーカー削除 */
-    display: flex;
-    gap: 10px;
-    white-space: nowrap;
+    white-space: normal;
+    flex-wrap: wrap;
   }
-  
-  .symbol {
-    color: #888;
-    margin-left: 4px;
-  }
-  
   .right {
-    flex: 1;
-    padding-right: 60px;
+    width: 100%;
+    padding-right: 20px;
+    font-size: 14px;
   }
-  
-  #text {
-    padding: 20px;
+  .right h2 {
+    font-size: 16px;
   }
-  
   .title {
-    font-size: 70px;
-    margin: 0;
+    font-size: 32px;
   }
-  
-  .section {
-    margin-top: 30px;
-  }
-  
-  .seasoningList,
-  .procedureList {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .seasoningList li,
-  .procedureList li {
-    margin-bottom: 20px;
-    display: flex;
-    gap: 10px;
-  }
-  
-  .seasonCount,
-  .procCount {
-    font-size: 30px;
-  }
-  
   .seasoningText,
   .procedureText {
-    padding-left: 20px;
-    font-size: 30px;
-    flex: 1;
+    font-size: 16px;
   }
-  
-  /* レスポンシブ */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 0;
-    }
-    .left {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .logo {
-      width: 40%;
-      margin: 0 auto;
-    }
-    .mainImage {
-      width: 100%;
-    }
-    .hoverImage {
-      width: 30%;
-    }
-    .hoverWrapper h2,
-    .dressingList {
-      white-space: normal;
-      flex-wrap: wrap;
-    }
-    .right {
-      padding-right: 20px;
-      font-size: 14px;
-    }
-    .title {
-      font-size: 50px;
-    }
-    .seasoningText,
-    .procedureText {
-      font-size: 16px;
-    }
-  }
-  
+}

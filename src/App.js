@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Top from './components/Top'
 import Copy from './components/Copy'
 import Slider from './components/Slider'
+import News from './components/News'
 
 import Products from './components/Products'
 import Caption from './components/Caption'
@@ -32,14 +33,13 @@ import './company.css'
 
 function AppContent() {
   const { pathname } = useLocation()
-  // /tyogo/〜 かつさらにパスが続く場合だけヘッダーを隠す
-  const hideHeader = /^\/tyogo\/[^/]+$/.test(pathname)
 
   return (
     <div className="App">
-      {!hideHeader && <Header />}
+      {/* hideHeader ロジックを削除し、常に Header を表示 */}
+      <Header />
       <Routes>
-        <Route path="/" element={<><Top /><Copy /><Slider /></>} />
+        <Route path="/" element={<><Top /><Copy /><News /><Slider /></>} />
         <Route path="/products" element={<><Products /><Caption /><Interview /><Slider /></>} />
         <Route path="/company" element={<><Company /><Companyimg /><Companycopy /><Companyinfo /><Suppliers /></>} />
         <Route path="/tyogo" element={<><Headers /><Sliders /><Today /><RecipeContainer /></>} />

@@ -1,0 +1,53 @@
+/* src/styles/News.module.css */
+.newstitle {
+    margin-top: 90px;
+    margin-bottom: 16px;
+    padding-left: 4.5vw;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+    font-size: 47px;
+  }
+  
+  .newsList {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 105px;
+  }
+  
+  .newsdiv {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    padding: 45px 0;                    /* 上下 45px、左右 0 */
+    border: none;
+    border-bottom: 0.3px solid #D9D9D9;
+    background-color: #fff;
+    font-weight: bold;
+  }
+  
+  .left {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .right {
+    text-align: left;
+    padding-left: 130px;
+    font-size: 18px;
+  }
+  
+  .right a,
+  .right a:visited {
+    color: #000;
+    text-decoration: none;
+    transition: 0s;
+  }
+  
+  .right a:hover {
+    color: #D9D9D9;
+  }
+  

@@ -22,6 +22,22 @@ const Footer = () => {
           </div>
 
           <div className={styles.aboutcom}>
+            {/* 商品について */}
+            <div className={styles.aboutgoods}>
+              <p>商品について</p>
+              <a
+                href="https://retailer.orosy.com/wholesale/c210c4eb-1197-4f5b-bb32-b673e6005b9b"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                バイヤーの方はこちら
+              </a>
+              <Link to="/tyogo">
+                レシピはこちら
+              </Link>
+            </div>
+
+
             {/* 会社について */}
             <div className={styles.comsns}>
               <div className={styles.nav}>
@@ -48,30 +64,19 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-
-            {/* 商品について */}
-            <div className={styles.aboutgoods}>
-              <p>商品について</p>
-              <a
-                href="https://retailer.orosy.com/wholesale/c210c4eb-1197-4f5b-bb32-b673e6005b9b"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                バイヤーの方はこちら
-              </a>
-              <Link to="/tyogo">
-                レシピはこちら
-              </Link>
-            </div>
+          
           </div>
         </div>
 
         <div className={styles.cominfo}>
-          <p className={styles.comname}>
-            株式会社YOKOYAMA<br />
-            〒169-0051<br />
-            東京都新宿区西早稲田3-1-6-402
-          </p>
+          <p >○　本社</p>
+          <p >　　株式会社YOKOYAMA</p>
+          <p >　　〒169-0051</p>
+          <p >　　東京都新宿区西早稲田3-1-6-402</p>
+          <p >○　支社</p>
+          <p >　　〒101-0061</p>
+          <p >　　東京都千代田区神田三崎3-6-1</p>
+          <p >　　BACH2F 008</p>
         </div>
       </div>
 

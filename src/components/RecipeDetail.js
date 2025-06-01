@@ -71,13 +71,6 @@ export default function RecipeDetail() {
     <div className={styles.container}>
       {/* 左カラム */}
       <div className={styles.left}>
-        <Link to="/">
-          <img
-            src="/img/main_logo.svg"
-            className={styles.logo}
-            alt="Main Logo"
-          />
-        </Link>
 
         {mainImgUrl && (
           <img
@@ -85,27 +78,6 @@ export default function RecipeDetail() {
             alt={titleText}
             className={styles.mainImage}
           />
-        )}
-
-        {hoverImgUrl && (
-          <div className={styles.hoverWrapper}>
-            <h2>使用したドレッシング</h2>
-            <img
-              src={hoverImgUrl}
-              alt={hoverBlk.hovertext || titleText}
-              className={styles.hoverImage}
-            />
-            <ul className={styles.dressingList}>
-              {dressingItems.map((item, i) => (
-                <li key={i}>
-                  {item.text}
-                  {item.symbol && (
-                    <span className={styles.symbol}>{item.symbol}</span>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
         )}
       </div>
 
@@ -139,6 +111,28 @@ export default function RecipeDetail() {
               ))}
             </ol>
           </section>
+        )}
+
+        {/* hoverWrapper は右カラムのセクション下に移動 */}
+        {hoverImgUrl && (
+          <div className={styles.hoverWrapper}>
+            <h2>使用したドレッシング</h2>
+            <img
+              src={hoverImgUrl}
+              alt={hoverBlk.hovertext || titleText}
+              className={styles.hoverImage}
+            />
+            <ul className={styles.dressingList}>
+              {dressingItems.map((item, i) => (
+                <li key={i}>
+                  {item.text}
+                  {item.symbol && (
+                    <span className={styles.symbol}>{item.symbol}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         )}
       </div>
     </div>

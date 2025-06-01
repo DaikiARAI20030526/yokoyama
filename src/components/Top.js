@@ -1,6 +1,7 @@
-import React from "react";
+// src/components/Top.js
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "../styles/Top.module.css"; // CSSモジュールをインポート
+import styles from "../styles/Top.module.css";
 
 const images = [
   {
@@ -21,18 +22,60 @@ const images = [
 ];
 
 const Top = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
   return (
     <div className={styles.topMain}>
-      {images.map((img, index) => (
-        <Link key={index} to="/products" className={styles.imageContainer}>
-          <img className={styles.frontSide} src={img.front} alt="TONGARI Front" />
-          <img className={styles.backSide} src={img.back} alt="TONGARI Back" />
-          <img className={styles.noHover} src={img.hover} alt="TONGARI Hover" />
-        </Link>
-      ))}
+      {images.map((img, index) => {
+        const isHovered = hoveredIndex === index;
+        const anyHovered = hoveredIndex !== null;
+
+        return (
+          <Link
+            key={index}
+            to="/products"
+            className={styles.imageContainer}
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            {isHovered ? (
+              <>
+                {/* ホバーされた場合、frontとbackを横並びで表示 */}
+                <img
+                  className={styles.image}
+                  src={img.front}
+                  alt="TONGARI Front"
+                  style={{ width: "50%" }}
+                />
+                <img
+                  className={styles.image}
+                  src={img.back}
+                  alt="TONGARI Back"
+                  style={{ width: "50%" }}
+                />
+              </>
+            ) : anyHovered ? (
+              // 他のアイテムには hover 画像を表示
+              <img
+                className={styles.image}
+                src={img.hover}
+                alt="TONGARI Hover"
+                style={{ width: "100%" }}
+              />
+            ) : (
+              // どれもホバーされていないときは front を表示
+              <img
+                className={styles.image}
+                src={img.front}
+                alt="TONGARI Front"
+                style={{ width: "100%" }}
+              />
+            )}
+          </Link>
+        );
+      })}
     </div>
   );
 };
 
 export default Top;
-//
