@@ -19,7 +19,7 @@
 /* mainImage の幅を 90%、ボーダーを削除 */
 .mainImage {
   width: 90%;
-  margin: 0 auto;
+  margin-left: 20px;
   border: none;
 }
 
