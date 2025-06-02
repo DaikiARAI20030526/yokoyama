@@ -51,4 +51,30 @@
   display: none;
 }
 
+ @media only screen and (min-width: 751px) {
+    .imageContainer:hover .frontSide,
+    .imageContainer:hover .backSide {
+      display: block;
+      width: 50%;
+    }
+  }
 
+@media screen and (max-width: 890px) {
+  @media screen and (min-height: 600px) {
+    .topMain {
+      height: 72vh;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .topMain {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 450px) {
+
+  .topMain {
+    margin-top: 12px;
+    height: 330px;
+  }}

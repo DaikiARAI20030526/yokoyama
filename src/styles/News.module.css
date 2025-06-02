@@ -50,4 +50,11 @@
   .right a:hover {
     color: #D9D9D9;
   }
-  
+  @media screen and (max-width: 890px) {
+  .newstitle{
+    font-size: 5vw;
+  }
+  .right{
+    font-size: 3vw;
+}
+  }

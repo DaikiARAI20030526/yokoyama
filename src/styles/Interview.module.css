@@ -109,6 +109,12 @@ body {
     position: absolute;
 }
 
+
+.yokoyamasan {
+    font-size: 20px;
+    line-height: 42px;
+    margin-top: 26px;
+}
 .kikite {
     font-size: 16px;
     line-height: 42px;
@@ -131,7 +137,7 @@ body {
 .convasation {
     white-space: normal;
     width: 56.3vw;
-    font-size: 20px;
+    font-size: 22px;
     text-align: left;
     margin-left: 60px;
     letter-spacing: 0.25rem;
@@ -432,182 +438,333 @@ footer h3 {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px){
+    
+    
+    }
     .parent {
         width: 100px;
     }
 
-    .talksection p {
-        width: 48.92vw;
-        text-align: justify;
-    }
-}
-
-@media screen and (max-width: 1100px) {
-    .content {
-        display: flex;
-        letter-spacing: 5px;
-        margin-left: 0;
-        position: relative;
-        margin-top: 10px;
+    .talksection p{
+        width:48.92vw;
+    text-align:justify;
     }
 
-    .price {
-        margin: 0;
-    }
 
-    .button p {
-        margin-left: 92.5px;
-    }
+        @media screen and (max-width: 1100px){
+            .content{
+                display: flex;
+                letter-spacing: 5px;
+                margin-left: 0;
+                position: relative;
+                margin-top: 10px;
+            }
+            .price{
+              margin: 0;
+        }
+        .button p{
+            margin-left: 92.5px;
+        }
 
-    .scroll-infinity__item {
-        width: calc(100vw / 5);
-    }
 
-    .footer {
-        flex-direction: column;
-    }
+        .scroll-infinity__item {
+            width: calc(100vw / 5); /* 各アイテムの幅を調整 */
+        }
+        .footer{
+            flex-direction: column;
+        }
+        .comname{
+            margin-left: 12px;
+        }
+        
 
-    .comname {
-        margin-left: 12px;
-    }
-}
 
-@media screen and (max-width: 800px) {
-    .title h1 {
+        }
+
+
+@media screen and (max-width: 800px){
+    
+    .title h1{
         font-size: 10.5vw;
         letter-spacing: 0.26em;
     }
 
-    .goodsinfo h2 {
+    .goodsinfo h2{
         font-size: 2vw;
         letter-spacing: 0.8em;
     }
 
-    .price {
+    .price{
         font-size: 16px;
         letter-spacing: 0.3em;
     }
 
-    .convasation {
+    .conversation{
         width: 100%;
         margin: 0;
         text-align: left;
     }
-
-    .convasation p {
+    .conversation p{
         width: 100%;
-        font-size: 20px;
+       
     }
-
-    .talksection {
+    .talksection{
         padding: 0 12vw;
         margin-top: -4px;
     }
 
-    .heading h1 {
-        font-size: 6.75vw;
-        line-height: 9.75vw;
-        padding: 0 12vw;
-    }
+           .heading h1 {
+            font-size: 6.75vw;
+            line-height: 9.75vw;
+            padding: 0 12vw;
+           }
 
-    .left-content {
-        flex-direction: column;
-    }
-
+   .left-content{
+    flex-direction: column;
+   }
     .scroll-infinity {
         overflow: hidden;
         white-space: nowrap;
-        width: 300vw;
+        width: 300vw; /* スクロールバーの幅を考慮して調整 */
         position: relative;
     }
-
-    .scroll-infinity__item {
-        width: calc(150vw / 6);
-    }
-
-    .footer {
+    .section{
         flex-direction: column;
+            margin-top: 60px;
     }
+  
 
-    .left-content {
-        display: flex;
-        flex-direction: row;
-    }
 
-    .display {
-        line-height: 40px;
-        margin: 0 auto;
-        align-items: center;
-    }
-
-    .display a {
-        font-size: 24px;
-        line-height: 45px;
-    }
-
-    .display p {
-        font-size: 24px;
-        line-height: 45px;
-        margin-right: 0;
-    }
-
-    .display p span {
-        letter-spacing: 1.6px;
-    }
+.scroll-infinity__item{
+    width: calc(150vw / 6)
 }
+.footer{
+    flex-direction: column;
+}
+.left-content{
+    display: flex;
+    flex-direction: row;
+}
+.display {
+    line-height: 40px;
+    margin: 0 auto;
+    align-items: center;
+    
+}
+.display a {
+    font-size: 24px;
+    line-height: 45px;
+}
+.display p  {
+    font-size: 24px;
+    line-height: 45px;
+    margin-right: 0;
+             }
 
-@media screen and (max-width: 650px) {
-    .goodsinfo h1 {
+.display p span{
+    letter-spacing: 1.6px;
+    
+    }
+
+
+}
+@media screen and (max-width: 650px){
+
+    .goodsinfo h1{
         font-size: 68.1px;
     }
 
-    .goodsinfo h2 {
-        font-size: 13.2px;
-    }
+.goodsinfo h2{
+   font-size: 13.2px;
 }
 
-@media screen and (max-width: 600px) {
-    .goods h2 {
-        font-size: 13px;
+
+}
+
+@media screen and (max-width: 600px){
+
+.goods h2{
+    font-size: 13px;
+}
+.scroll-infinity__item{
+    width: calc(200vw / 6)
+}
+.scroll-infinity__wrap {
+    width: calc(150%); /* コンテンツの幅に合わせて設定 */
+    animation: infinity-scroll-right 20s linear infinite;
+}
+.left-content{
+    flex-direction: column;
+}
+.about-goods{
+    padding-top: 0;
+    margin-left: 0;
+    padding-left: 10px;
+}
+.nav{
+    padding-top: 0;
+    /* margin-left: 30px; */
+    /* 商品についてが追加されたら表示する */
+    margin-left: 12px;
+}
+.SNS{
+    /* margin-left: 30px; */
+    margin-left: 9px;
+}
+.com-sns {
+    /* margin-left: 96px; */
+    /* 商品についてが追加されたら表示する */
+    margin-left: 0;
+}
+.comname {
+    font-size: 16px;
+}
+}
+
+@media screen and (max-width: 580px){
+
+    .goodsinfo h1{
+        font-size: 11.72vw;
     }
 
-    .scroll-infinity__item {
-        width: calc(200vw / 6);
+.goodsinfo h2{
+   font-size: 2.27vw;
+}
+
+.price{
+    font-size: 13.5px;
+}
+
+.button p{
+    margin-left: 38px;
+}
+
+.button button{
+    margin-left: 24px;
+    font-size: 18px;
+}
+
+}
+
+
+
+@media screen and (max-width: 450px){
+    .logo {
+        width: 15%;
+        margin-left:3.2vw;
     }
 
+.conversation{ 
+    margin-top: -76px;
+}
+
+    .display p{
+        font-size: 20px;
+        line-height: 35px;
+        margin-right: 0;
+    }
+    .display a{
+        font-size: 20px;
+        line-height: 35px;
+    }
+
+    .display p span{
+        letter-spacing: 0.5px;
+        
+        }
+
+    .section{
+        margin-top: 120px;
+        margin-bottom: 30px;
+    }
+
+
+    .goods{
+        font-size: 30px;
+    }
+
+    .talksection {
+        margin-top: -2px;
+    }
+
+   .talksection p{
+    width:100%;
+text-align:justify;
+}
+
+    .talksection .kikite{
+        font-size: 12px;
+        letter-spacing: 3px;
+        line-height: 30px;
+        margin-top: -2px;
+    }
+    .talksection .yokoyamasan{
+        font-size: 15px;
+        letter-spacing: 3px;
+        line-height: 34px;
+    }
     .scroll-infinity__wrap {
-        width: calc(150%);
         animation: infinity-scroll-right 20s linear infinite;
+        
+    }
+.goodsinfo h1 {
+        letter-spacing: 10px;
+        font-size: 12.8vw;
+        margin-top: 1px;
+        margin-left: 5px;
+    }
+.goodsinfo h2 {
+    font-size: 3.77vw;
+        letter-spacing: 1.2px;
+    }
+    .main img {
+        width: 71%;
+    }
+    .price {
+        font-size: 3.11vw;
+        letter-spacing: 0.143em;
+        line-height: 20px;
+        padding-right: 5px;
+        margin-left: 2px;
     }
 
-    .left-content {
-        flex-direction: column;
-    }
-
-    .about-goods {
-        padding-top: 0;
-        margin-left: 0;
-        padding-left: 10px;
-    }
-
-    .nav {
-        padding-top: 0;
-        margin-left: 12px;
-    }
-
-    .footer {
-        padding-bottom: 20px;
-    }
-
-    .footer-text {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .left-content {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    .button button {
+        margin-left: 2.4em;
+        padding: 3px 18px;
+        margin-top: 2px;
+        font-size: 4.22vw;
+        border: 3px solid #D9D9D9;
+}
+.button p {
+    margin-left: 4.8em;
+    margin-top: 0;
+    letter-spacing: 2px;
+    font-size: 2.66vw;
+    
+}
+.heading h1 {
+    font-size: 6.44vw;
+    letter-spacing: 1.11vw;
+    line-height: 9vw;
+}
+.cominfo .comname {
+    line-height: 40px;
+}
+.goods{
+    font-size: 30px;
+    padding-top:30px;
+}
+.about-goods{
+    margin-left: -10px;
+}
+.rank {
+    padding-top:30px;
+}
+.rank p{
+margin-bottom: 40px;
+}
+.com-sns {
+    /* margin-left: 48px; */
+}
 }

@@ -3,12 +3,13 @@ import styles from "../styles/Copy.module.css"; // CSSモジュールをイン�
 
 const Copy = () => {
   return (
-    <p className={styles.copy} style={{ marginBottom: "36px" }}>
-      かけて！煮て！<br />
-      混ぜて！焼いて！<br />
-      漬けて！炊いて！<br />
-      YOKOYAMAは万能ソースの専門メーカーです。
-    </p>
+<p className={styles.copy} style={{ marginBottom: "36px" }}>
+  かけて！煮て！<br />
+  混ぜて！焼いて！<br />
+  漬けて！炊いて！<br />
+  YOKOYAMAは<span className={styles.break}><br /></span>万能ソースの専門メーカーです。
+</p>
+
   );
 };
 
