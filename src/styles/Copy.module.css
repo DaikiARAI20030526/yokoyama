@@ -14,3 +14,30 @@
     margin-top: 36px;
   }
 }
+@media screen and (max-width: 1000px) {
+  .copy {
+      font-size: 6.2vw;
+    }
+  @media screen and (min-height: 600px) {
+    .copy {
+      font-size: 4.82vw;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .copy {
+    font-size: 4.8vw;
+  }
+}
+
+.break {
+  display: none;
+}
+
+/* 画面幅が900px以下のときだけ改行を表示 */
+@media screen and (max-width: 1400px) {
+  .break {
+    display: inline;
+  }
+}

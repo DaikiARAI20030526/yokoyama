@@ -458,18 +458,6 @@ footer h3 {
     .button p {
         margin-left: 92.5px;
     }
-
-    .scroll-infinity__item {
-        width: calc(100vw / 5);
-    }
-
-    .footer {
-        flex-direction: column;
-    }
-
-    .comname {
-        margin-left: 12px;
-    }
 }
 
 @media screen and (max-width: 800px) {
@@ -486,73 +474,6 @@ footer h3 {
     .price {
         font-size: 16px;
         letter-spacing: 0.3em;
-    }
-
-    .convasation {
-        width: 100%;
-        margin: 0;
-        text-align: left;
-    }
-
-    .convasation p {
-        width: 100%;
-        font-size: 20px;
-    }
-
-    .talksection {
-        padding: 0 12vw;
-        margin-top: -4px;
-    }
-
-    .heading h1 {
-        font-size: 6.75vw;
-        line-height: 9.75vw;
-        padding: 0 12vw;
-    }
-
-    .left-content {
-        flex-direction: column;
-    }
-
-    .scroll-infinity {
-        overflow: hidden;
-        white-space: nowrap;
-        width: 300vw;
-        position: relative;
-    }
-
-    .scroll-infinity__item {
-        width: calc(150vw / 6);
-    }
-
-    .footer {
-        flex-direction: column;
-    }
-
-    .left-content {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .display {
-        line-height: 40px;
-        margin: 0 auto;
-        align-items: center;
-    }
-
-    .display a {
-        font-size: 24px;
-        line-height: 45px;
-    }
-
-    .display p {
-        font-size: 24px;
-        line-height: 45px;
-        margin-right: 0;
-    }
-
-    .display p span {
-        letter-spacing: 1.6px;
     }
 }
 
@@ -571,42 +492,4 @@ footer h3 {
         font-size: 13px;
     }
 
-    .scroll-infinity__item {
-        width: calc(200vw / 6);
-    }
-
-    .scroll-infinity__wrap {
-        width: calc(150%);
-        animation: infinity-scroll-right 20s linear infinite;
-    }
-
-    .left-content {
-        flex-direction: column;
-    }
-
-    .about-goods {
-        padding-top: 0;
-        margin-left: 0;
-        padding-left: 10px;
-    }
-
-    .nav {
-        padding-top: 0;
-        margin-left: 12px;
-    }
-
-    .footer {
-        padding-bottom: 20px;
-    }
-
-    .footer-text {
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .left-content {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-    }
 }

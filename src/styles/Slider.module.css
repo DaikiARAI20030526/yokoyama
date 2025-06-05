@@ -216,29 +216,21 @@
   margin-top: 21px;
 }
 
-@media screen and (max-width: 1006px) {
-  .footer {
-    flex-direction: column;
-  }
-}
+@media screen and (max-width: 600px) {
 
-@media screen and (max-width: 450px) {
-  .logo {
-    width: 15%;
-    margin-left: 3.2vw;
+  .slider::-webkit-scrollbar {
+    display: block;
   }
-  .copy {
-    font-size: 6.88vw;
-    margin-top: 36px;
+
+  .sliderCard {
+    width: 30%;
   }
-  .goods {
-    font-size: 30px;
-    padding-top: 30px;
+
+  .scrollInfinityItem {
+    width: calc(200vw / 6);
   }
-  .rank {
-    padding-top: 30px;
-  }
-  .cominfo .comname {
-    line-height: 40px;
+  .scrollWrap {
+    width: calc(150%); /* コンテンツの幅に合わせて設定 */
+    animation: infinity-scroll-right 20s linear infinite;
   }
 }

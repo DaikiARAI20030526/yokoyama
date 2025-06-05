@@ -208,6 +208,10 @@
   .scroll-infinity__item {
     width: calc(100vw / 5); /* 各アイテムの幅を調整 */
   }
+  .cominfo{
+    padding-left: 10px;
+    padding-top: 20px;
+  }
 }
 
 @media screen and (max-width: 890px) {
@@ -246,11 +250,7 @@
     /* 商品についてが追加された際下記を削除し使用する */
     margin-left: 9px;
   }
-  .comsns {
-    /* margin-left: 96px; */
-    /* 商品についてが追加された場合下記を削除し使用する */
-    margin-left: 0;
-  }
+ 
   .SNS img {
     padding-right: 0;
     margin: 0;
