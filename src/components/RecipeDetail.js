@@ -1,6 +1,6 @@
 // src/components/RecipeDetail.jsx
 import React, { useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams,} from 'react-router-dom'
 import { microcmsClient } from '../lib/microcmsClient'
 import styles from '../styles/RecipeDetail.module.css'
 

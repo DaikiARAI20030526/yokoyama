@@ -86,7 +86,7 @@ const Footer = () => {
             <h3>©YOKOYAMA INC.</h3>
           </div>
           <div className={styles.back}>
-            <a href="#">ページTOPへ</a>
+            <a href="#Top">ページTOPへ</a>
           </div>
         </div>
       </footer>

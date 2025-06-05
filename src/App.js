@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 
 import Header from './components/Header'
@@ -32,10 +32,9 @@ import './products.css'
 import './company.css'
 
 function AppContent() {
-  const { pathname } = useLocation()
 
   return (
-    <div className="App">
+    <div className="App" id ="Top">
       {/* hideHeader ロジックを削除し、常に Header を表示 */}
       <Header />
       <Routes>

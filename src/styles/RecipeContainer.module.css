@@ -50,7 +50,7 @@
 .imgContainer {
   position: relative;
   width: 100%;
-  border: 10px solid #f8f8f8;
+  
   box-sizing: border-box;
   overflow: hidden;
 }

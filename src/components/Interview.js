@@ -58,16 +58,16 @@ const Interview = () => {
           名称：乳化液状ドレッシング
           <br />
           原材料名：
-          <a className={styles.kodawariyanen} href="#">
+          <p className={styles.kodawariyanen} >
             豚骨スープ
-          </a>
+          </p>
           (ガラ
           <br />
           スープ、本醸造醤油、食用植
           <br />
           物油脂、砂糖、その他)(国内
           <br />
-          製造)、<a className={styles.kodawariyanen} href="#">本醸造醤油</a>、<a className={styles.kodawariyanen} href="#">ニンニク</a>
+          製造)、<p className={styles.kodawariyanen} >本醸造醤油</p>、<p className={styles.kodawariyanen} >ニンニク</p>
           <br />
           /調味料(アミノ酸等)、カラ
           <br />
