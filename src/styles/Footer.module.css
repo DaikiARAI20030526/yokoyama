@@ -290,23 +290,18 @@
 }
 
 @media screen and (max-width: 450px) {
-  .logo {
-    width: 15%;
-    margin-left: 3.2vw;
-  }
-  .main {
-    margin-top: 12px;
-    height: 330px;
-  }
-  .copy {
-    font-size: 6.88vw;
-    margin-left: -3px;
-    margin-top: 36px;
-  }
+
+
   .goods {
     font-size: 30px;
     padding-top: 30px;
   }
+  .goods a {
+    padding: 0;
+
+  }
+  
+
   .aboutgoods {
     margin-left: -10px;
   }
@@ -319,5 +314,9 @@
 
   .cominfo .comname {
     line-height: 40px;
+  }
+  .cominfo{
+    padding-left: 0;
+    padding-top: 20px;
   }
 }

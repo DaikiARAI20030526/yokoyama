@@ -1,4 +1,3 @@
-
 .topMain {
   display: flex;
   margin-left: auto;
@@ -25,56 +24,26 @@
   width: 100%;
 }
 
-.imageContainer:hover .frontSide,
-.imageContainer:hover .backSide {
-  display: block;
-  width: 50%;
-}
-
-.imageContainer.otherHovering .frontSide {
-  display: none;
-}
-
-.imageContainer.otherHovering .noHover {
-  display: block;
-}
-
-.center:hover + .left {
-  opacity: 50%;
-}
-
-.backSide {
-  display: none;
-}
-
-.noHover {
-  display: none;
-}
-
- @media only screen and (min-width: 751px) {
-    .imageContainer:hover .frontSide,
-    .imageContainer:hover .backSide {
-      display: block;
-      width: 50%;
-    }
-  }
-
-@media screen and (max-width: 890px) {
-  @media screen and (min-height: 600px) {
-    .topMain {
-      height: 72vh;
-    }
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .topMain {
-    height: 50vh;
-  }
-}
+/* ↓ 450px 以下ではホバー動作を全て無効化する */
 @media screen and (max-width: 450px) {
-
   .topMain {
-    margin-top: 12px;
-    height: 330px;
-  }}
+    /* 指示どおり高さ 80vh にし、max-width を none にする */
+    margin-top: 12px;   /* 元からついていた余白は残す */
+    height: 67vh;
+    max-width: none;
+  }
+
+
+  /* .imageContainer:hover img,
+  .imageContainer:hover .frontSide,
+  .imageContainer:hover .backSide,
+  .imageContainer.otherHovering .frontSide,
+  .imageContainer.otherHovering .noHover {
+    display: none !important;
+  }
+
+  .imageContainer img {
+    display: block !important;
+    width: 100% !important;
+  } */
+}

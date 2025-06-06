@@ -1,4 +1,3 @@
-
 .copy {
   margin-top: 90px;
   padding-left: 4.86vw;
@@ -8,36 +7,46 @@
   font-size: 47px;
 }
 
-@media screen and (max-width: 450px) {
-  .copy {
-    font-size: 6.88vw;
-    margin-top: 36px;
-  }
-}
+/* 既存のブレーク：画面幅1000px以下で文字サイズを42pxに */
 @media screen and (max-width: 1000px) {
   .copy {
-      font-size: 6.2vw;
-    }
-  @media screen and (min-height: 600px) {
-    .copy {
-      font-size: 4.82vw;
-    }
+    font-size: 42px;
   }
 }
 
+/* 650px以下で文字サイズを36pxに */
 @media screen and (max-width: 650px) {
   .copy {
-    font-size: 4.8vw;
+    font-size: 36px;
   }
 }
 
+/* 450px以下で文字サイズを40px＆マージントップを36pxに */
+@media screen and (max-width: 450px) {
+  .copy {
+    font-size: 8vw;;
+    margin-top: 10px;
+  }
+}
+
+/* ── ここから改行部分 ── */
+
+/* 「1300px以下でだけ改行」を担う既存の .break */
 .break {
   display: none;
 }
-
-/* 画面幅が900px以下のときだけ改行を表示 */
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   .break {
+    display: inline;
+  }
+}
+
+/* 600px以下でだけ表示する “追加の改行” 用 .mobileBreak */
+.mobileBreak {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .mobileBreak {
     display: inline;
   }
 }
