@@ -4,9 +4,7 @@ import styles from "../styles/Products.module.css"; // CSSモジュールの適�
 const Products = () => {
   return (
     <div className={styles.main}>
-      <p >
         <img src="img/TONGARI両面.jpg" alt="TONGARI 両面" />
-      </p>
     </div>
   );
 };

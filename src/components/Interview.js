@@ -4,6 +4,7 @@ import styles from "../styles/Interview.module.css"; // CSSモジュールの適
 const Interview = () => {
   return (
     <div className={styles.section}>
+      {/* ── 会話パート ── */}
       <div className={styles.conversation}>
         <div className={styles.heading}>
           <h1>
@@ -53,21 +54,23 @@ const Interview = () => {
         </div>
       </div>
 
+      {/* ── 成分表パート ── */}
       <div className={styles.display}>
         <p className={styles.paragraph}>
           名称：乳化液状ドレッシング
           <br />
           原材料名：
-          <p className={styles.kodawariyanen} >
-            豚骨スープ
-          </p>
+          {/* <span> に置き換えて強調部分のみスタイルを当てる */}
+          <span className={styles.kodawariyanen}>豚骨スープ</span>
           (ガラ
           <br />
           スープ、本醸造醤油、食用植
-          <br />
+           <br />
           物油脂、砂糖、その他)(国内
           <br />
-          製造)、<p className={styles.kodawariyanen} >本醸造醤油</p>、<p className={styles.kodawariyanen} >ニンニク</p>
+          製造)、
+          <span className={styles.kodawariyanen}>本醸造醤油</span>、
+          <span className={styles.kodawariyanen}>ニンニク</span>
           <br />
           /調味料(アミノ酸等)、カラ
           <br />
@@ -85,7 +88,7 @@ const Interview = () => {
           <br />
           販売者：(株)ヨコヤマ
           <br />
-          <span>東京都新宿区西早稲田3-1-6-402</span>
+          <span className={styles.address}>東京都新宿区西早稲田3-1-6-402</span>
           <br />
           TEL：03-4446-9067
         </p>
@@ -95,4 +98,3 @@ const Interview = () => {
 };
 
 export default Interview;
-// CSSモジュールの適用

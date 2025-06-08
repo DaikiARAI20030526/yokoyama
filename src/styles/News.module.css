@@ -56,5 +56,9 @@
   }
   .right{
     font-size: 3vw;
+    padding-left: 35px;
+}
+.newsList {
+  padding-bottom: 50px;
 }
   }
