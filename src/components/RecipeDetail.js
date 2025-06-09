@@ -1,6 +1,6 @@
 // src/components/RecipeDetail.jsx
 import React, { useEffect, useState } from 'react'
-import { useParams,} from 'react-router-dom'
+import { useParams,Link} from 'react-router-dom'
 import { microcmsClient } from '../lib/microcmsClient'
 import styles from '../styles/RecipeDetail.module.css'
 
@@ -71,6 +71,10 @@ export default function RecipeDetail() {
     <div className={styles.container}>
       {/* 左カラム */}
       <div className={styles.left}>
+
+      <div className={styles.backDiv}>
+          <Link to="/tyogo">←レシピ一覧へ</Link>
+        </div>
 
         {mainImgUrl && (
           <img
