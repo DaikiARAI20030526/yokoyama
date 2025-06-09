@@ -1,0 +1,34 @@
+/* src/styles/ProductContainer.module.css */
+
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+  
+  /* 画面幅1300px以上で3列に */
+  @media screen and (min-width: 1300px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .productItem {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .productImg {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  
+  .productTitle {
+    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }

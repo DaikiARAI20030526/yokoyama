@@ -1,328 +1,198 @@
+/* Footer.module.css */
 
+/* --- 既存 --- */
 .footer {
   font-size: 1.84vw;
   font-weight: bold;
-  padding: 0 20px;
-  margin-top: 4.41vw;
+  padding: 0 30px;
+  margin-top: 52px;
   display: flex;
-  margin-right: 0;
+  justify-content: space-between;  /* 子要素を左右に振り分け */
+  align-items: flex-start;
 }
 
 .leftcontent {
   display: flex;
 }
 
-.goods {
-  display: flex;
-  flex-direction: column;
-  padding: 45px 20px;
-  margin-left: 0px;
-  padding-left: 0;
-  font-size: 40px;
-  text-align: left;
-}
 .leftcontainer {
   display: flex;
 }
 
+/* goods, rank のスタイルはそのまま */
+.goods {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 45px 0;
+  font-size: 47px;
+  gap: 50px;
+}
 .goods a {
-  list-style: none;
   text-decoration: none;
   color: black;
-  padding: 10px;
+  padding: 10px 0;
 }
-
-.rank {
-  font-size: 18px;
-  margin-left: 0;
-  color: rgb(0, 255, 0);
-  /* padding-top: 47px; */
-  /* 他のドレッシングの味が追加された時に下記を削除し使用する */
-  padding-top: 53px;
-}
-
-.rank p {
-  margin-bottom: 58px;
-}
-
 .goods a:hover {
   -webkit-text-stroke: 0.3px yellow;
   text-decoration: line-through;
 }
+.rank {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 50px;
+}
+.rankItem {
+  position: relative;
+  width: 380px;   /* 必要に応じて画像サイズに合わせて */
+  height: 120px;
+  overflow: hidden;
+}
+.rotated,
+.front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28.5%;
+  transform-origin: top left;
+  transition: opacity 0.2s ease-in-out;
+}
+.rotated {
+  transform: rotate(90deg) translateY(-100%);
+  opacity: 1;
+}
+.front {
+  transform: rotate(90deg) translateY(-100%);
+  opacity: 0;
+}
+.rankItem:hover .rotated {
+  opacity: 0;
+}
+.rankItem:hover .front {
+  opacity: 1;
+}
 
-.aboutgoods {
+/* --- 新規追加: aboutcom と cominfo をまとめるラッパー --- */
+.footercominfo {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 55px;
+}
+
+/* 商品について */
+.aboutcom {
   font-size: 17px;
   display: flex;
   flex-direction: column;
   text-align: left;
   white-space: nowrap;
-  margin-left: 6.03vw;
-  padding-top: 64px;
-}
-.aboutcom {
-  display: flex;
-}
-.comsns {
-  display: flex;
-  flex-direction: column;
-}
-
-.aboutgoods p {
+  /* padding-top は不要になったので削除 or 調整 */
   margin: 0;
 }
-
-.aboutgoods a {
-  list-style: none;
+.aboutcom p {
+  font-weight: bold;
+  margin: 0;
+}
+.aboutcom a {
   text-decoration: none;
   color: gray;
   padding-top: 20px;
+  transition: color 0.2s;
+}
+.aboutcom a:hover {
+  color: black;
 }
 
-.aboutgoods a:hover {
-  color: black;
+/* 会社情報・SNS */
+.comsns {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4vw;
 }
 
 .nav {
   font-size: 17px;
   display: flex;
   flex-direction: column;
-  text-align: left;
-  padding-bottom: 15px;
-  width: 100%;
-  white-space: nowrap;
-  padding-top: 64px;
 }
-
 .nav p {
   margin: 0;
 }
-
 .nav a {
-  list-style: none;
-  text-decoration: none;
-  color: gray;
-  padding-top: 20px;
-  transition: 0.2s;
-}
-
-.nav a:hover {
-  color: black;
-}
-
-.comsns {
-  display: flex;
-  flex-direction: column;
-  margin-left: 6vw;
-}
-
-.SNS {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  margin-right: 6.03vw;
-  margin-left: -1.7px;
-}
-
-.SNS img {
-  width: 38px;
-  margin-right: 0px;
-  padding-top: 0px;
-}
-
-.youtube:hover {
-  opacity: 60%;
-}
-
-.X:hover {
-  opacity: 60%;
-}
-
-.instagram:hover {
-  opacity: 60%;
-}
-
-/* Footer.module.css */
-/* 既存のスタイルはそのままに、.aboutgoods を活用します */
-
-.aboutgoods {
-  font-size: 17px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  white-space: nowrap;
-  margin-left: 6vw;
-  padding-top: 64px;
-}
-
-.aboutgoods p {
-  font-weight: bold;
-}
-
-.aboutgoods a,
-.aboutgoods a:visited,
-.aboutgoods a:link {
   text-decoration: none;
   color: gray;
   padding-top: 20px;
   transition: color 0.2s;
 }
-
-.aboutgoods a:hover {
+.nav a:hover {
   color: black;
 }
 
+.SNS {
+  display: flex;
+  margin-top: 20px;
+}
+.SNS img {
+  width: 38px;
+  margin-right: 10px;
+}
+.SNS div:hover {
+  opacity: 0.6;
+}
 
+/* 会社所在地 */
 .cominfo {
   display: flex;
   flex-direction: column;
-  white-space: nowrap;
-  font-size: 16px;
-  padding-top: 44px;
-  padding-left: 7.5vw;
+  font-size: 12px;
   font-weight: 600;
+  color: gray;
+  margin-left: 2.5vw;
+  white-space: nowrap;
 }
 .cominfo p {
-  padding-top: 20px;
+  padding: 5px 0;
   margin: 0;
 }
 
+/* フッター下部テキスト */
 .footertext {
   display: flex;
   justify-content: space-between;
-  text-align: center;
-  width: 100%;
+  align-items: center;
+  padding: 0 30px;
 }
-
 .back {
   padding-top: 15px;
 }
 
+/* --- レスポンシブ調整 --- */
 @media screen and (max-width: 1006px) {
   .footer {
     flex-direction: column;
+    align-items: flex-start;
   }
-  .comname {
-    margin-left: 12px;
-  }
-  .scroll-infinity__item {
-    width: calc(100vw / 5); /* 各アイテムの幅を調整 */
-  }
-  .cominfo{
-    padding-left: 10px;
-    padding-top: 20px;
+  .footercominfo {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 30px;
   }
 }
-
-@media screen and (max-width: 890px) {
-  @media screen and (min-height: 600px) {
-    .main {
-      height: 72vh;
-    }
-    .copy {
-      font-size: 5.82vw;
-    }
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .main {
-    height: 50vh;
-  }
-  .copy {
-    font-size: 5.82vw;
-  }
-}
-
 @media screen and (max-width: 600px) {
-  .footer {
-    flex-direction: column;
-  }
-
-  .SNS {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    transition: 0s;
-    margin-left: 4.86vw;
-    /* margin-left: 30px; */
-    /* 商品についてが追加された際下記を削除し使用する */
-    margin-left: 9px;
-  }
- 
-  .SNS img {
-    padding-right: 0;
-    margin: 0;
-  }
-
-  .slider::-webkit-scrollbar {
-    display: block;
-  }
-
-  .slidercard {
-    width: 30%;
-  }
-  .leftcontent {
-    flex-direction: column;
-  }
-  .aboutgoods {
-    padding-top: 0;
-    margin-left: 0;
-    padding-left: 10px;
-  }
-  .nav {
-    padding-top: 0;
-    /* margin-left: 30px; */
-    /* 商品についてが追加された際下記を削除し使用する */
-    margin-left: 12px;
-  }
-  .comname {
-    font-size: 16px;
-  }
-  .scroll-infinity__item {
-    width: calc(200vw / 6);
-  }
-  .scroll-__wrap {
-    width: calc(150%); /* コンテンツの幅に合わせて設定 */
-    animation: infinity-scroll-right 20s linear infinite;
-  }
-}
-
-@media screen and (max-width: 450px) {
-
-
   .goods {
     font-size: 30px;
-    padding-top: 30px;
+    padding: 40px 20px 50px 0;
   }
-  .goods a {
-    padding: 0;
-
+  .rankItem {
+    width: 150px;
+    height: 40px;
   }
-  
-
-  .aboutgoods {
-    margin-left: -10px;
+  .footercominfo {
+    gap: 1rem;
   }
-  .rank {
-    padding-top: 30px;
-  }
-  .rank p {
-    margin-bottom: 40px;
-  }
-
-  .cominfo .comname {
-    line-height: 40px;
-  }
-  .cominfo{
-    padding-left: 0;
-    padding-top: 30px;
-  }
+}
+@media screen and (max-width: 450px) {
   .cominfo p {
     font-size: 14px;
-  }
-  .comsns {
-    margin-left: 7.5vw;
   }
 }

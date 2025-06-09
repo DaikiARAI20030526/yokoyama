@@ -10,6 +10,7 @@ import Top from './components/Top'
 import Copy from './components/Copy'
 import Slider from './components/Slider'
 import News from './components/News'
+import ProductContainer from './components/ProductContainer'
 
 import Products from './components/Products'
 import Caption from './components/Caption'
@@ -38,7 +39,7 @@ function AppContent() {
       {/* hideHeader ロジックを削除し、常に Header を表示 */}
       <Header />
       <Routes>
-        <Route path="/" element={<><Top /><Copy /><News /><Slider /></>} />
+        <Route path="/" element={<><Top /><Copy /><News /><ProductContainer /><Slider /></>} />
         <Route path="/products" element={<><Products /><Caption /><Interview /><Slider /></>} />
         <Route path="/company" element={<><Company /><Companyimg /><Companycopy /><Companyinfo /><Suppliers /></>} />
         <Route path="/tyogo" element={<><Headers /><Sliders /><Today /><RecipeContainer /></>} />

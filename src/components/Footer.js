@@ -7,39 +7,56 @@ const Footer = () => {
   return (
     <div>
       <div className={styles.footer}>
+        {/* ← 左端：商品リンク＆rank（変更なし） */}
         <div className={styles.leftcontent}>
           <div className={styles.leftcontainer}>
             <div className={styles.goods}>
               <Link to="/products">TONGARI</Link>
               <a href="TORIPAI.html">TORIPAI</a>
-              {/* <a href=""> */} {/* <a> KOMUTAN</a> */}
             </div>
             <div className={styles.rank}>
-              <p>1</p>
-              {/* <p>3</p> */}
-              {/* <p>2</p> */}
+              <div className={styles.rankItem}>
+                <img
+                  className={styles.rotated}
+                  src="img/TONGARI正面.jpg"
+                  alt="TONGARI 正面"
+                />
+                <img
+                  className={styles.front}
+                  src="img/TONGARI成分表.jpg"
+                  alt="TONGARI 成分表"
+                />
+              </div>
+              <div className={styles.rankItem}>
+                <img
+                  className={styles.rotated}
+                  src="img/TONGARI正面.jpg"
+                  alt="TONGARI 正面"
+                />
+                <img
+                  className={styles.front}
+                  src="img/TONGARI成分表.jpg"
+                  alt="TONGARI 成分表"
+                />
+              </div>
             </div>
           </div>
+        </div>
 
+        {/* ← ここから新規ラッパー。aboutcom と cominfo を横並びに */}
+        <div className={styles.footercominfo}>
           <div className={styles.aboutcom}>
-            {/* 商品について */}
-            <div className={styles.aboutgoods}>
-              <p>商品について</p>
-              <a
-                href="https://retailer.orosy.com/wholesale/c210c4eb-1197-4f5b-bb32-b673e6005b9b"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                バイヤーの方はこちら
-              </a>
-              <Link to="/tyogo">
-                レシピはこちら
-              </Link>
-            </div>
-
-
-            {/* 会社について */}
-            <div className={styles.comsns}>
+            <p>商品について</p>
+            <a
+              href="https://retailer.orosy.com/wholesale/c210c4eb-1197-4f5b-bb32-b673e6005b9b"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              バイヤーの方はこちら
+            </a>
+            <Link to="/tyogo">レシピはこちら</Link>
+          </div>
+          <div className={styles.comsns}>
               <div className={styles.nav}>
                 <p>会社について</p>
                 <Link to="/company#header">代表挨拶</Link>
@@ -64,20 +81,19 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-          
+
+          <div className={styles.cominfo}>
+            <p>本社</p>
+            <p>株式会社YOKOYAMA</p>
+            <p>〒169-0051</p>
+            <p>東京都新宿区西早稲田3-1-6-402</p>
+            <p>支社</p>
+            <p>〒101-0061</p>
+            <p>東京都千代田区神田三崎3-6-1</p>
+            <p>BACH2F 008</p>
           </div>
         </div>
-
-        <div className={styles.cominfo}>
-          <p >本社</p>
-          <p >株式会社YOKOYAMA</p>
-          <p >〒169-0051</p>
-          <p >東京都新宿区西早稲田3-1-6-402</p>
-          <p >支社</p>
-          <p >〒101-0061</p>
-          <p >東京都千代田区神田三崎3-6-1</p>
-          <p >BACH2F 008</p>
-        </div>
+        {/* ↑ ここまでラッパー */}
       </div>
 
       <footer>
