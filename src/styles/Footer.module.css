@@ -181,14 +181,29 @@
 @media screen and (max-width: 600px) {
   .goods {
     font-size: 30px;
-    padding: 40px 20px 50px 0;
+    padding: 0px 10px 0 0;
+    gap: 12px;
+  }
+  .rank {
+    gap: 16px;
+    padding-top: 14px;
   }
   .rankItem {
-    width: 150px;
-    height: 40px;
+    width: 220px;
+    height: 60px;
   }
   .footercominfo {
-    gap: 1rem;
+    gap: 40px;
+  }
+  .footercominfo {
+    margin-top: 0;
+    padding-top: 30px;
+  }
+  .comsns {
+    margin-left: 0;
+  }
+  .cominfo {
+    margin-left: 0;
   }
 }
 @media screen and (max-width: 450px) {

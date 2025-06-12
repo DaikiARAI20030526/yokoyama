@@ -33,21 +33,28 @@ export default function ProductContainer() {
   if (error)   return <p>エラーが発生しました</p>;
 
   return (
-    <div className={styles.container}>
-      {products.map(({ slug, title, img }) => (
-        <Link
-          key={slug}
-          to={`/products/${slug}`}
-          className={styles.productItem}
-        >
-          <img
-            src={img?.url || '/no-image.png'}
-            alt={title}
-            className={styles.productImg}
-          />
-          <p className={styles.productTitle}>{title}</p>
-        </Link>
-      ))}
-    </div>
+    <>
+      {/* 追加部分: ドレッシング見出し */}
+      <div className={styles.titlesection}>
+        <p>ドレッシング</p>
+      </div>
+
+      <div className={styles.container}>
+        {products.map(({ slug, title, img }) => (
+          <Link
+            key={slug}
+            to={`/products/${slug}`}
+            className={styles.productItem}
+          >
+            <img
+              src={img?.url || '/no-image.png'}
+              alt={title}
+              className={styles.productImg}
+            />
+            <p className={styles.productTitle}>{title}</p>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }
