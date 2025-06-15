@@ -4,6 +4,11 @@ import styles from '../styles/Companycopy.module.css';  // CSS Modulesをイン�
 const Companycopy = () => {
   return (
     <div id={styles.greet}>  {/* stylesオブジェクトを使用 */}
+    <div className={styles.name}>
+          <p>代表ご挨拶<br/>
+          横山淳一</p>
+          <img src="img/ceo-image2.jpg" alt="代表横山の画像" />
+        </div>
       <div className={styles.container}>  {/* stylesオブジェクトを使用 */}
         <p className={styles.p1}>
           当社は、「食卓に新たな選択肢を」をコンセプトとし、2022年に設立しました。<br />

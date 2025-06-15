@@ -1,38 +1,41 @@
+/* src/styles/Company.module.css */
 
-.comtitle {
+/* ラッパーをflexで横並びに */
+.companyWrapper {
+    padding: 0 20px;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  /* 既存の comtitle */
+  .comtitle {
     text-align: left;
-    margin-left: 12.8vw;
-}
-
-.comtitle h1 {
-    font-size: 3.6vw;
+  }
+  .comtitle h1 {
+    font-size: 50px;
     letter-spacing: 1.2vw;
-    margin: 0;
-    margin-top: 14px;
-    line-height: 6vw;
-}
-
-.name {
-    text-align: left;
-    font-size: 2vw;
-    line-height: 40px;
-    white-space: nowrap;
-    font-weight: 300;
-}
-
-.name p {
-    margin-top: 0.5vw;
-}
-
-        @media screen and (max-width: 650px){
-            
-            .comtitle{
-                margin-bottom: 0;}
-        
-            .comtitle .name {
-                margin-bottom: 0;
-            }
-        }
+    margin-top: 70px;
+    line-height: 1.6em;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  
+  
+  /* モバイル時の調整 */
+  @media screen and (max-width: 650px) {
+    .companyWrapper {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      text-align: center;
+    }
+    .comtitle h1 {
+      /* 自動改行を許可 */
+      font-size: 27px;
+      word-break: break-all;      /* 文字単位で折り返し */
+      overflow-wrap: break-word;  /* 単語単位で折り返し */
+      white-space: normal;        /* 折り返しを強制 */
+      margin-top: 40px;
+    }
     
-   
-
+  }

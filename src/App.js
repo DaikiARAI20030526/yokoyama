@@ -17,7 +17,6 @@ import Caption from './components/Caption'
 import Interview from './components/Interview'
 
 import Company from './components/Company'
-import Companyimg from './components/Companyimg'
 import Companycopy from './components/Companycopy'
 import Companyinfo from './components/Companyinfo'
 import Suppliers from './components/Suppliers'
@@ -41,7 +40,7 @@ function AppContent() {
       <Routes>
         <Route path="/" element={<><Top /><Copy /><News /><ProductContainer /><Slider /></>} />
         <Route path="/products" element={<><Products /><Caption /><Interview /><Slider /></>} />
-        <Route path="/company" element={<><Company /><Companyimg /><Companycopy /><Companyinfo /><Suppliers /></>} />
+        <Route path="/company" element={<><Company /><Companycopy /><Companyinfo /><Suppliers /></>} />
         <Route path="/tyogo" element={<><Headers /><Sliders /><Today /><RecipeContainer /></>} />
         <Route path="/tyogo/:slug" element={<RecipeDetail />} />
       </Routes>

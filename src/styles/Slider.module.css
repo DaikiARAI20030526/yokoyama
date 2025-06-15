@@ -1,91 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap");
+/* Slider.module.css */
 
-:global(html) {
-  scroll-behavior: smooth;
-}
-
-:global(body) {
-  width: 100%;
-  font-family: "Noto Sans JP", sans-serif;
-  margin: 0;
-  margin-top: 8px;
-}
-
-.logo {
-  width: 9%;
-  margin-top: 0.81vw;
-  margin-left: 1.25vw;
-}
-
-
-
-.topMain {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 75%;
-  height: clamp(94vh, 93vh, 0%);
-  justify-content: space-between;
-}
-
-@supports (-webkit-appearance:none) and (stroke-color:transparent) {
-  .topMain {
-    height: clamp(93vh, 92vh, 0%);
-    height: calc(var(--vh, 1vh) * 93);
-  }
-}
-
-.imageContainer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.imageContainer img {
-  object-fit: contain;
-  width: 100%;
-}
-
-.imageContainer:hover .frontSide,
-.imageContainer:hover .backSide {
-  display: block;
-  width: 50%;
-}
-
-.imageContainer.otherHovering .frontSide {
-  display: none;
-}
-
-.imageContainer.otherHovering .noHover {
-  display: block;
-}
-
-.center:hover + .left {
-  opacity: 50%;
-}
-
-.backSide {
-  display: none;
-}
-
-.noHover {
-  display: none;
-}
-
-.copy {
-  margin-top: 7vh;
-  padding-left: 4.86vw;
-  font-weight: bold;
-  letter-spacing: 0.26em;
-  white-space: nowrap;
-  font-size: 47px;
-}
-
+/* 1. アニメーションを「全体の半分だけ」ずらすように修正 */
 @keyframes infinityScrollRight {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
 
@@ -94,18 +15,12 @@
   overflow: hidden;
 }
 
-.scrollInfinity {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-  position: relative;
-  margin: 0 auto;
-}
-
 .scrollInfinityWrap {
   display: flex;
-  animation: infinityScrollRight 40s linear infinite;
-  width: 100%;
+  /* コンテンツ幅に合わせる */
+  width: max-content;
+  /* 40秒かけて「半周分＝1セット分」の幅を移動 */
+  animation: infinityScrollRight 45s linear infinite;
 }
 
 .scrollInfinityList {
@@ -117,7 +32,8 @@
 
 .scrollInfinityItem {
   flex: 0 0 auto;
-  width: calc(100vw / 6);
+  /* デスクトップでは1枚あたりビューポート幅の1/8 */
+  width: calc(150vw / 8);
   padding-right: 4.41vw;
 }
 
@@ -126,111 +42,17 @@
   display: block;
 }
 
+/* タッチで一時停止 */
 .scrollInfinityWrap:active {
   animation-play-state: paused;
 }
 
-.footer {
-  font-size: 1.84vw;
-  font-weight: bold;
-  padding: 0 3.68vw;
-  margin-top: 4.41vw;
-  display: flex;
-  margin-right: 0;
-}
-
-.leftContent {
-  display: flex;
-}
-
-.goods {
-  display: flex;
-  flex-direction: column;
-  padding: 45px 20px;
-  font-size: 40px;
-  text-align: left;
-}
-
-.goods a {
-  text-decoration: none;
-  color: black;
-  padding: 10px;
-}
-
-.rank {
-  font-size: 18px;
-  color: rgb(0, 255, 0);
-  padding-top: 53px;
-}
-
-.goods a:hover {
-  -webkit-text-stroke: 0.3px yellow;
-  text-decoration: line-through;
-}
-
-.aboutGoods {
-  font-size: 17px;
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  white-space: nowrap;
-  margin-left: 6.03vw;
-  padding-top: 64px;
-}
-
-.comSns {
-  display: flex;
-  flex-direction: column;
-  margin-left: 6.7vw;
-}
-
-.sns {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 100%;
-  margin-left: -1.7px;
-}
-
-.sns img {
-  width: 38px;
-}
-
-.youtube:hover,
-.x:hover,
-.instagram:hover {
-  opacity: 60%;
-}
-
-.cominfo {
-  display: flex;
-  flex-direction: column;
-  white-space: nowrap;
-  font-size: 16px;
-  padding-top: 21px;
-  font-weight: 600;
-}
-
-.cominfo p {
-  line-height: 66px;
-  margin-top: 21px;
-}
-
+/* 2. 600px以下ではカードを少し大きく、同じ仕組みでシームレスに */
 @media screen and (max-width: 600px) {
-
-  .slider::-webkit-scrollbar {
-    display: block;
-  }
-
-  .sliderCard {
-    width: 30%;
-  }
-
   .scrollInfinityItem {
-    width: calc(200vw / 6);
-  }
-  .scrollWrap {
-    width: calc(150%); /* コンテンツの幅に合わせて設定 */
-    animation: infinity-scroll-right 20s linear infinite;
+    /* 2セット（200vw）を8等分→1枚25vw */
+    width: calc(350vw / 8);
+    /* padding は同じ間隔を保つ */
+    padding-right: 4.41vw;
   }
 }
