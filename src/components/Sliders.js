@@ -1,106 +1,78 @@
-// src/components/Sliders.js
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../styles/Sliders.module.css';
 
-/**
- * 各グループ・各アイテムごとに
- * - angle: 回転角度
- * - width: 幅
- * - left, top: 画像の配置を数値（CSS値）で指定
- */
+// 画面サイズに応じた設定を持つ
 const groupConfigs = [
   {
-    // Aグループ
     items: [
       {
         to: '/tongari',
         img: '/img/TONGARI正面.jpg',
-        angle: 45,         // 回転角度
-        width: '13.5%',      // 幅
-        left: '20%',       // 左からの位置
-        top: '0%',         // 上からの位置
+        desktop: { angle: 45, width: '13.5%', left: '20%', top: '0%' },
+        mobile: { angle: 20, width: '30%', left: '20%', top: '15%' },
       },
       {
         to: '/toripai',
         img: '/img/toripai-front.png',
-        angle: -40,        // 回転角度
-        width: '13.5%',
-        left: '62%',
-        top: '-8%',
+        desktop: { angle: -40, width: '13.5%', left: '62%', top: '-8%' },
+        mobile: { angle: -20, width: '30%', left: '60%', top: '15%' },
       },
     ],
   },
   {
-    // Bグループ
     items: [
       {
         to: '/toripai',
         img: '/img/toripai-front.png',
-        angle: 140,
-        width: '12.5%',
-        left: '20%',
-        top: '0%',
+        desktop: { angle: 140, width: '12.5%', left: '20%', top: '0%' },
+        mobile: { angle: 140, width: '30%', left: '10%', top: '15%' },
       },
       {
         to: '/tongari',
         img: '/img/TONGARI正面.jpg',
-        angle: 200,
-        width: '12.5%',
-        left: '60%',
-        top: '0%',
+        desktop: { angle: 200, width: '12.5%', left: '60%', top: '0%' },
+        mobile: { angle: -150, width: '40%', left: '65%', top: '15%' },
       },
     ],
   },
   {
-    // Cグループ
     items: [
       {
         to: '/tongari',
         img: '/img/TONGARI正面.jpg',
-        angle: 245,
-        width: '12.5%',
-        left: '68%',
-        top: '15%',
+        desktop: { angle: 245, width: '12.5%', left: '68%', top: '15%' },
+        mobile: { angle: 210, width: '100vw', left: '25%', top: '30%' },
       },
     ],
   },
   {
-    // Dグループ
     items: [
       {
         to: '/toripai',
         img: '/img/toripai-front.png',
-        angle: 198,
-        width: '12%',
-        left: '40%',
-        top: '0%',
+        desktop: { angle: 198, width: '12%', left: '40%', top: '0%' },
+        mobile: { angle: 198, width: '100vw', left: '25%', top: '25%' },
       },
     ],
   },
   {
-    // Eグループ
     items: [
       {
         to: '/tongari',
         img: '/img/TONGARI正面.jpg',
-        angle: 75,
-        width: '12.5%',
-        left: '19%',
-        top: '-10%',
+        desktop: { angle: 75, width: '12.5%', left: '19%', top: '-10%' },
+        mobile: { angle: 55, width: '100vw', left: '35%', top: '5%' },
       },
     ],
   },
   {
-    // Fグループ
     items: [
       {
         to: '/toripai',
         img: '/img/toripai-front.png',
-        angle: 220,
-        width: '12%',
-        left: '74%',
-        top: '0%',
+        desktop: { angle: 220, width: '12%', left: '74%', top: '0%' },
+        mobile: { angle: 200, width: '100vw', left: '25%', top: '5%' },
       },
     ],
   },
@@ -108,9 +80,17 @@ const groupConfigs = [
 
 export default function Sliders() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
-    // 15秒ごとに A→B→C→D→E→F の順で切り替え
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % groupConfigs.length);
     }, 7000);
@@ -121,28 +101,27 @@ export default function Sliders() {
 
   return (
     <div className={styles.container}>
-
       <div className={styles.group}>
-        {currentGroup.items.map((bottle, idx) => (
-          <Link
-            to={bottle.to}
-            key={idx}
-            className={styles.link}
-          >
-            <img
-              src={bottle.img}
-              alt="Bottle"
-              className={styles.image}
-              style={{
-                transform: `rotate(${bottle.angle}deg)`,
-                width: bottle.width,
-                position: 'absolute',
-                left: bottle.left,
-                top: bottle.top,
-              }}
-            />
-          </Link>
-        ))}
+        {currentGroup.items.map((bottle, idx) => {
+          const config = isMobile ? bottle.mobile : bottle.desktop;
+
+          return (
+            <Link to={bottle.to} key={idx} className={styles.link}>
+              <img
+                src={bottle.img}
+                alt="Bottle"
+                className={styles.image}
+                style={{
+                  transform: `rotate(${config.angle}deg)`,
+                  width: config.width,
+                  position: 'absolute',
+                  left: config.left,
+                  top: config.top,
+                }}
+              />
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

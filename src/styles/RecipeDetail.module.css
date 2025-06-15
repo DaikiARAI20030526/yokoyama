@@ -2,7 +2,17 @@
 .container {
   display: flex;
   gap: 2%;
+  margin-top: 50px;
 }
+.backDiv a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.backDiv{
+  margin-bottom: 30px;
+}
+
 
 /* 左カラムを 70% 幅にし、パディングを削除 */
 .left {
@@ -55,8 +65,8 @@
 /* 右カラムを 20% 幅にし、個別スクロールを無効化 */
 .right {
   width: 35%;
-  padding-right: 60px;
   overflow: visible;
+  margin-top: 30px;
 }
 .right h1{
   margin: 0 ;
@@ -102,14 +112,15 @@
 }
 
 /* レスポンシブ */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .container {
     flex-direction: column;
     gap: 0;
+    margin-right: 20px;
   }
-  .left {
+  .left{
     width: 100%;
-    padding: 0;
+    margin-right: 20px;
   }
   .left a {
     width: 40%;
@@ -121,29 +132,36 @@
     margin: 0 auto;
   }
   .mainImage {
-    width: 100%;
+    width: calc(100% - 20px);
   }
   .hoverImage {
-    width: 30%;
+    width: 20%;
+    margin-top: 30px;
   }
-  .hoverWrapper h2,
+  .hoverWrapper h2{
+    margin-top: 40px;
+  }
   .dressingList {
     white-space: normal;
     flex-wrap: wrap;
   }
   .right {
     width: 100%;
-    padding-right: 20px;
+
     font-size: 14px;
+    margin-left: 20px;
   }
   .right h2 {
-    font-size: 16px;
+    font-size: 13px;
   }
   .title {
-    font-size: 32px;
+    font-size: 23px;
   }
-  .seasoningText,
+  .seasoningText{
+    font-size: 13px;
+  }
   .procedureText {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
+
