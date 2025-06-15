@@ -1,0 +1,237 @@
+
+.yokoyamasan {
+    font-size: 20px;
+    line-height: 48px;
+    margin-top: 26px;
+}
+.kikite {
+    font-size: 16px;
+    line-height: 48px;
+    margin-top: 26px;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    margin-bottom: 6.62vw;
+    margin-top: 84px;
+    justify-content: space-between;
+}
+
+.talk {
+    display: flex;
+    text-align: left;
+}
+
+.conversation {
+    white-space: normal;
+    width: 56.3vw;
+    font-size: 22px;
+    text-align: left;
+    letter-spacing: 0.25rem;
+}
+
+.heading h1 {
+    white-space: nowrap;
+    font-size: 3.68vw;
+    padding-left: 30px;
+    line-height: 5vw;
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+
+.talksection {
+    margin-top: 30px;
+    padding: 0 20px 0 30px;
+    letter-spacing: 0.25rem;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: justify;
+}
+
+
+/* 元々の <p> 全体にかかっていたスタイル。
+   今回は強調部分には <span> を使うので、動的に上書きして枠を消します。 */
+.display p {
+    font-size: 33vw;
+    display: inline-block;
+    border: solid 2px #D9D9D9;
+    line-height: 50vw;
+    letter-spacing: 0.5vw;
+    color: #D9D9D9;
+    white-space: nowrap;
+    cursor: pointer;
+    position: sticky;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+    top: 4.41vh;
+    text-align: left;
+    align-items: center;
+    font-weight: 350;
+    padding: 0.58vw 10vw;
+}
+
+/* 強調用リンクがあれば黄色下線に */
+.display a {
+    text-decoration: underline;
+    color: #FFEE00;
+}
+
+/* <span> 内の文字間隔調整など */
+.display p span {
+    letter-spacing: 0.5vw;
+}
+
+.kodawariyanen {
+    display: inline;
+    border: none;
+    position: static;
+    top: auto;
+    padding: 0;
+    margin-right: 0;
+    text-decoration: underline;
+    color: #FFEE00;
+}
+
+.address {
+    color: #D9D9D9;
+    text-decoration: none;
+    font-size: 2.06vw;
+    line-height: 3.31vw;
+    letter-spacing: 2.8px !important;
+  }
+
+@media screen and (max-width: 800px) {
+    .address {
+      /* 800px以下では文字を24px・行間45pxに */
+      font-size: 24px;
+      line-height: 45px;
+      letter-spacing: 0.8px !important;
+    }
+  }
+
+
+
+@media screen and (max-width: 1100px){
+    .content{
+        display: flex;
+        letter-spacing: 5px;
+        margin-left: 0;
+        position: relative;
+        margin-top: 10px;
+    }
+    .price{
+      margin: 0;
+    }
+    .button p{
+      margin-left: 92.5px;
+    }
+
+}
+
+@media screen and (max-width: 800px){
+    .title h1{
+        font-size: 10.5vw;
+        letter-spacing: 0.26em;
+    }
+
+    .goodsinfo h2{
+        font-size: 2vw;
+        letter-spacing: 0.8em;
+    }
+
+    .price{
+        font-size: 16px;
+        letter-spacing: 0.3em;
+    }
+
+    .conversation{
+        width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+    .conversation p{
+        width: 100%;
+    }
+    .talksection{
+        padding: 0 12vw;
+        margin-top: -4px;
+    }
+
+    .heading h1 {
+        font-size: 6.75vw;
+        line-height: 9.75vw;
+        padding: 0 12vw;
+    }
+
+    .left-content{
+        flex-direction: column;
+    }
+    .section{
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+  
+    .display {
+        line-height: 40px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .display a {
+        font-size: 24px;
+        line-height: 45px;
+    }
+    .display p {
+        font-size: 24px;
+        line-height: 45px;
+        margin-right: 0;
+    }
+    .display p span {
+        letter-spacing: 1.6px;
+    }
+
+    
+
+}
+
+
+
+
+@media screen and (max-width: 450px){
+
+
+    .talksection {
+        margin-top: -2px;
+        padding: 0 20px;
+    }
+
+    .talksection p {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .talksection .kikite {
+        font-size: 12px;
+        letter-spacing: 3px;
+        line-height: 30px;
+        margin-top: -2px;
+    }
+    .talksection .yokoyamasan {
+        font-size: 15px;
+        letter-spacing: 3px;
+        line-height: 34px;
+    }
+    .heading h1 {
+        font-size: 6.44vw;
+        letter-spacing: 1.11vw;
+        line-height: 9vw;
+        padding: 0 20px;
+    }
+    .section{
+        flex-direction: column;
+        margin-top: 45px;
+    }
+
+}

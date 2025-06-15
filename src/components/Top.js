@@ -6,98 +6,93 @@ import styles from "../styles/Top.module.css";
 const images = [
   {
     front: "img/TONGARI正面.jpg",
-    back: "img/TONGARI成分表.jpg",
+    back:  "img/TONGARI成分表.jpg",
     hover: "img/TONGARI正面（色うす）.jpg",
+    path:  "/tongari",   // ← 追加
   },
   {
-    front: "img/TONGARI正面.jpg",
-    back: "img/TONGARI成分表.jpg",
-    hover: "img/TONGARI正面（色うす）.jpg",
-  },
-  {
-    front: "img/TONGARI正面.jpg",
-    back: "img/TONGARI成分表.jpg",
-    hover: "img/TONGARI正面（色うす）.jpg",
+    front: "img/TORIPAI正面.jpg",
+    back:  "img/TORIPAI正面.jpg",
+    hover: "img/TORIPAI正面.jpg",
+    path:  "/toripai",   // ← 追加
   },
 ];
 
+const MOBILE_BREAKPOINT = 540;
+
 const Top = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 450);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= MOBILE_BREAKPOINT
+  );
 
-  // ウィンドウサイズ変更を監視して、450px 以下かどうかを判定
   useEffect(() => {
-    const onResize = () => {
-      setIsMobile(window.innerWidth <= 450);
-    };
+    const onResize = () =>
+      setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
   return (
     <div className={styles.topMain}>
-      {images.map((img, index) => {
-        // 450px 以下では常に front のみをレンダリング
+      {images.map((img, idx) => {
+        // モバイル時は front のみ & リンク先も img.path に
         if (isMobile) {
           return (
             <Link
-              key={index}
-              to="/products"
+              key={idx}
+              to={img.path}
               className={styles.imageContainer}
-              // モバイルでは hover イベントを使わないので onMouseEnter/Leave は設定しない
             >
               <img
                 className={styles.image}
                 src={img.front}
-                alt="TONGARI Front"
+                alt={`${idx === 0 ? "TONGARI" : "TORIPAI"} Front`}
                 style={{ width: "100%" }}
               />
             </Link>
           );
         }
 
-        // それ以外（451px 以上）は、従来どおりホバー判定を行う
-        const isHovered = hoveredIndex === index;
+        // デスクトップ時のホバー挙動
+        const isHovered = idx === hoveredIndex;
         const anyHovered = hoveredIndex !== null;
 
         return (
           <Link
-            key={index}
-            to="/products"
+            key={idx}
+            to={img.path}                      // ← ここも動的に
             className={styles.imageContainer}
-            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseEnter={() => setHoveredIndex(idx)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
             {isHovered ? (
               <>
-                {/* ホバーされたアイテム：front と back を横並びで表示 */}
                 <img
                   className={styles.image}
                   src={img.front}
-                  alt="TONGARI Front"
+                  alt={`${idx === 0 ? "TONGARI" : "TORIPAI"} Front`}
                   style={{ width: "50%" }}
                 />
                 <img
                   className={styles.image}
                   src={img.back}
-                  alt="TONGARI Back"
+                  alt={`${idx === 0 ? "TONGARI" : "TORIPAI"} Back`}
                   style={{ width: "50%" }}
                 />
               </>
             ) : anyHovered ? (
-              /* ほかのアイテム：hover 用の “薄め” 画像を表示 */
               <img
                 className={styles.image}
                 src={img.hover}
-                alt="TONGARI Hover"
+                alt={`${idx === 0 ? "TONGARI" : "TORIPAI"} Hover`}
                 style={{ width: "100%" }}
               />
             ) : (
-              /* まだ何もホバーしていない状態：front を表示 */
               <img
                 className={styles.image}
                 src={img.front}
-                alt="TONGARI Front"
+                alt={`${idx === 0 ? "TONGARI" : "TORIPAI"} Front`}
                 style={{ width: "100%" }}
               />
             )}

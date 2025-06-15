@@ -13,14 +13,11 @@
     align-items: center;
     flex-direction: column;
 }
-.toripai-page .goodsinfo h1 {
-    color: #d0d0d0;   
-  }
 .goodsinfo h1 {
     letter-spacing: 22px;
     font-size: 84px;
     font-weight: 800;
-    color: #FFEE00;
+    color: #d0d0d0; 
     margin-bottom: 0;
     margin-top: -9px;
     -webkit-text-stroke: 1px black;
@@ -62,7 +59,7 @@
 }
 
 .button button:hover {
-    background-color: #FFEE00;
+    background-color: #d0d0d0;
     color: #ffffff;
 }
 
