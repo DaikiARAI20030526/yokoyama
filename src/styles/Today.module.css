@@ -93,6 +93,12 @@
   .name {
     font-size: 18px;
   }
+  .title p{
+    font-size: 30px;
+  }
+  .date p{
+    font-size: 30px;
+  }
   .caption {
     font-size: 14px;
     letter-spacing: 3px;
