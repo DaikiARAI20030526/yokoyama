@@ -1,49 +1,41 @@
+/* src/styles/Top.module.css */
+
 .topMain {
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   max-width: 75%;
-  height: clamp(94vh, 93vh, 0%);
+  height: calc(var(--vh, 1vh) * 93);
   justify-content: space-between;
 }
 
-@supports (-webkit-appearance:none) and (stroke-color:transparent) {
+@supports (-webkit-appearance: none) and (stroke-color: transparent) {
   .topMain {
-    height: clamp(93vh, 92vh, 0%);
     height: calc(var(--vh, 1vh) * 93);
   }
 }
 
+/* 各画像コンテナ：2カラムでも隙間を残して均等 */
 .imageContainer {
+  flex: 1;
+  max-width: 48%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.imageContainer img {
+.imageContainer img,
+.image {
   object-fit: contain;
   width: 100%;
+  height: auto;
 }
 
-/* ↓ 450px 以下ではホバー動作を全て無効化する */
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 540px) {
   .topMain {
     /* 指示どおり高さ 80vh にし、max-width を none にする */
-    margin-top: 12px;   /* 元からついていた余白は残す */
-    height: 67vh;
+    margin-top: 20px;   /* 元からついていた余白は残す */
+    height: 75vh;
+    padding: 0 22px 0 20px;
     max-width: none;
   }
-
-
-  /* .imageContainer:hover img,
-  .imageContainer:hover .frontSide,
-  .imageContainer:hover .backSide,
-  .imageContainer.otherHovering .frontSide,
-  .imageContainer.otherHovering .noHover {
-    display: none !important;
-  }
-
-  .imageContainer img {
-    display: block !important;
-    width: 100% !important;
-  } */
 }
+

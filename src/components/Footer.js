@@ -12,7 +12,7 @@ const Footer = () => {
           <div className={styles.leftcontainer}>
             <div className={styles.goods}>
               <Link to="/products">TONGARI</Link>
-              <a href="TORIPAI.html">TORIPAI</a>
+              <Link to="/products">TORIPAI</Link>
             </div>
             <div className={styles.rank}>
               <div className={styles.rankItem}>
@@ -30,13 +30,13 @@ const Footer = () => {
               <div className={styles.rankItem}>
                 <img
                   className={styles.rotated}
-                  src="img/TONGARI正面.jpg"
-                  alt="TONGARI 正面"
+                  src="img/TORIPAI正面.jpg"
+                  alt="TORIPAI 正面"
                 />
                 <img
                   className={styles.front}
-                  src="img/TONGARI成分表.jpg"
-                  alt="TONGARI 成分表"
+                  src="img/TORIPAI正面.jpg"
+                  alt="TORIPAI 成分表"
                 />
               </div>
             </div>

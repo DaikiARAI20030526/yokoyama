@@ -54,11 +54,21 @@
   .newstitle{
     font-size: 5vw;
   }
+  .left {
+    font-size: 3.5vw;
+    color: #666;
+  }
   .right{
-    font-size: 3vw;
+    font-size: 3.5vw;
     padding-left: 35px;
 }
 .newsList {
   padding-bottom: 50px;
+}
+.newstitle {
+  margin-top: 60px;
+}
+.newsdiv {
+  padding: 25px 0;                    /* 上下 45px、左右 0 */
 }
   }

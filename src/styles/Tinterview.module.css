@@ -53,21 +53,23 @@
 /* 元々の <p> 全体にかかっていたスタイル。
    今回は強調部分には <span> を使うので、動的に上書きして枠を消します。 */
 .display p {
-    font-size: 2.06vw;
+    font-size: 33vw;
     display: inline-block;
     border: solid 2px #D9D9D9;
-    line-height: 3.31vw;
+    line-height: 50vw;
     letter-spacing: 0.5vw;
     color: #D9D9D9;
     white-space: nowrap;
     cursor: pointer;
     position: sticky;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    margin-right: 30px;
     top: 4.41vh;
     text-align: left;
     align-items: center;
     font-weight: 350;
-    padding: 0.58vw;
-    margin-right: 2.35vw;
+    padding: 0.58vw 10vw;
 }
 
 /* 強調用リンクがあれば黄色下線に */

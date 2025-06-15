@@ -15,9 +15,11 @@ import ProductContainer from './components/ProductContainer'
 import Products from './components/Products'
 import Caption from './components/Caption'
 import Interview from './components/Interview'
+import Toripai from './components/Toripai'
+import Tcaption from './components/Tcaption'
+import Tinterview from './components/Tinterview'
 
 import Company from './components/Company'
-import Companyimg from './components/Companyimg'
 import Companycopy from './components/Companycopy'
 import Companyinfo from './components/Companyinfo'
 import Suppliers from './components/Suppliers'
@@ -40,8 +42,9 @@ function AppContent() {
       <Header />
       <Routes>
         <Route path="/" element={<><Top /><Copy /><News /><ProductContainer /><Slider /></>} />
-        <Route path="/products" element={<><Products /><Caption /><Interview /><Slider /></>} />
-        <Route path="/company" element={<><Company /><Companyimg /><Companycopy /><Companyinfo /><Suppliers /></>} />
+        <Route path="/tongari" element={<><Products /><Caption /><Interview /><Slider /></>} />
+        <Route path="/toripai" element={<><Toripai /><Tcaption /><Tinterview /><Slider /></>} />
+        <Route path="/company" element={<><Company /><Companycopy /><Companyinfo /><Suppliers /></>} />
         <Route path="/tyogo" element={<><Headers /><Sliders /><Today /><RecipeContainer /></>} />
         <Route path="/tyogo/:slug" element={<RecipeDetail />} />
       </Routes>

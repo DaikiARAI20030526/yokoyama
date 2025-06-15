@@ -17,6 +17,9 @@
 
 
 @media screen and (max-width: 600px) {
+    .main {
+        margin-top: 20px;
+    }
     .main img {
         margin: 0;
         width: 71%;

@@ -1,51 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&display=swap');
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    width: 100%;
-    font-family: "Noto Sans JP", sans-serif;
-    margin: 0;
-    margin-top: 8px;
-}
-
-.logo {
-    width: 9%;
-    margin-top: 0.81vw;
-    margin-left: 1.25vw;
-}
-
 #greet {
-    width: 100%;
     display: flex;
-    text-align: center;
-    margin-top: 48px;
-}
+    flex-wrap: wrap;    /* 子要素を必要に応じて折り返す */
+    font-weight: bold;
+    margin-top: 90px;
+    padding: 0 40px 0 20px;
+    gap: 60px;
+  }
 
 #greet img {
-    width: 52%;
+    width: 200px;
 }
-
+.name {
+    flex: 0 0 auto;     /* 幅は中身に合わせ、縮まない */
+  }
+.name p{
+    font-size: 20px;
+    line-height: 46px;
+    margin-top: -8px;
+}
 .container {
+    flex: 1 1 0;        /* 余白を埋める／縮む対象に */
+    min-width: 0;       /* 子要素の幅超過を防止 */
     display: flex;
     flex-direction: column;
-    padding: 0 12.8vw;
     margin-top: -20px;
     text-align: left;
-}
+  }
 
-.container p {
+  .container p {
     font-size: 20px;
     letter-spacing: 4px;
     padding-top: 42px;
     line-height: 46px;
-    font-weight: 500;
-    width: 74.4vw;
+    font-weight: bold;
+    width: 100%;
+    max-width: 100%;
     text-align: justify;
     margin-top: -30px;
-}
+  }
 
 .comtitle {
     text-align: left;
@@ -60,267 +52,32 @@ body {
     line-height: 6vw;
 }
 
-.name {
-    text-align: left;
-    font-size: 2vw;
-    line-height: 40px;
-    white-space: nowrap;
-    font-weight: 300;
-}
-
-.name p {
-    margin-top: 0.5vw;
-}
-
-.ceoimage {
-    margin-left: 12.8vw;
-    text-align: left;
-}
-
-.ceoimage img {
-    width: 36%;
-    border: solid 2.3vw #f9f9f9;
-}
-
-#companyinfo {
-    white-space: nowrap;
-    display: flex;
-    flex-direction: column;
-    padding: 0 12.8vw;
-    margin-top: 60px;
-}
-
-#companyinfo h1 {
-    height: 100%;
-    font-size: 40px;
-    margin-bottom: 60px;
-}
-
-.yokoyama {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #d9d9d9;
-    padding-bottom: 5px;
-    align-items: flex-end;
-    font-weight: 500;
-}
-
-.yokoyama2 {
-    font-size: 20px;
-    margin: 0;
-    font-weight: 500;
-}
-
-.yokoyama3 {
-    font-size: 15px;
-    color: rgb(0, 255, 0);
-    margin: 0;
-}
-
-@media screen and (max-width: 1039px){
-        .footer{
-            flex-direction: column;
-           }
-           .comname{
-            margin-left: 12px;
-        }
-    }
 
 
-    @media screen and (max-width: 800px){
-        
-        .section{
-            font-size: 15px;
-            line-height: 50px;
-        }
-        .footer{
-            flex-direction: column;
-           }
-
-        .supplier-img {
-            display: flex;
-        }
-           
-         
-    }
-        @media screen and (max-width: 650px){
-            
-            .title{
-                margin-bottom: 0;}
-        
-            .title .name {
-                margin-bottom: 0;
-            }
-
-              #greet {
-                margin-top: 0;
-              }
-          .container p{
-            font-size: 15px;
-            letter-spacing: 0.5px;
-            line-height: 30px;
-            margin: 0;
-          }         
-        .ceoimage img {
-            width: 40%;
-        }
-        #company-info h1 {
-            font-size: 30px;
-        }
-        .supplier-name p{
-            font-size: 12px;
-        }
-       
-        .left-content{
-            flex-direction: column;
-        }
-        .footer{
-            flex-direction: column;
-           }
-           .about-goods{
-            padding-top: 0;
-            margin-left: 0;
-            padding-left: 10px;
-        }
-        .com-sns{
-            /* margin-left: 96px; */
-    /* 商品についてが追加されたら表示する */
-    margin-left: 0;
-        }
-
-
-        .nav{
-            padding-top: 0;
-            /* margin-left: 30px; */
-            /* 商品についてが追加されたら表示する */
-            margin-left: 12px;
-        }
-        .SNS{
-            /* margin-left: 30px; */
-            /* 商品についてが追加されたら表示する */
-            margin-left: 9px;
-        }
-        .cominfo p {
-            font-size: 16px;
-        }
-        .yokoyama2{
-            font-size: 14px;
-        }
-        .place2{
-            font-size: 14px;
-        }
-        .date2{
-            font-size: 14px;
-        }
-        .content2{
-            font-size: 14px;
-        }
-        .bank2{
-            font-size: 14px;
-        }
-    }
     
-    @media screen and (max-width: 450px){
-        .logo {
-            width: 15%;
-            margin-left:3.2vw;
+    @media screen and (max-width: 580px) {
+        #greet {
+        margin-top: 0;
+          display: flex;
+          flex-direction: column;  /* 縦並びに */
+          gap: 45px;               /* 子要素間の余白 */
+          padding: 20px;           /* 余白を若干調整 */
         }
-
-        .title h1{
-            font-size: 4vw;
-            letter-spacing: 0.23em;
-            line-height: 6.7vw;
+        .container p {
+          font-size: 15px;
+          letter-spacing: 1px;
+          line-height: 30px;
+          padding-top: 20px;
+          margin-top: 0;
+        }
+        /* CEO 画像も幅を調整 */
+        .name img {
+          width: 60%;
         }
         .name p{
-            margin-top: 0.2vw;
+            font-size: 15px;
+            line-height: 30px;
+            margin-top: -2px;
         }
-
-        .yokoyama3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-  
-        .place3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-
-        .date3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-    
-        .content3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-
-        
-        .bank3 {
-            font-size: 14px;
-            color: rgb(0, 255, 0);
-            margin: 0;
-        }
-        
-        
-        .goods{
-            font-size: 30px;
-            padding-top: 30px;
-            
-        }
-        .about-goods{
-            margin-left: -10px;
-        }
-        .rank {
-            padding-top:30px;
-        }
-        #company-info{
-            white-space: nowrap;
-            display: flex;
-            flex-direction: column;
-            padding: 0 12.8vw;
-            margin-top: 32px;
-        }
-        .rank p{
-        margin-bottom: 40px;
-        }
-        .com-sns{
-            /* margin-left: 48px; */
-        }
-        .cominfo .comname {
-            line-height: 40px;
-        }
-        .container br {
-            display: none;
-        }
-        #company-info h1 {
-            margin-bottom: 40px; 
-    }
-      .supplier h1 {
-        font-size: 20px;
-        margin-bottom: 20px;
-        margin-top: 72px;
       }
-      
-.supplier-name {
-        font-size: 6px;
-    }
-}
 
-
-.place{
-   padding-top: 42px;
-}
-.date{
-    padding-top: 42px;
-}
-.content{
-    padding-top: 42px;
-}
-.bank{
-    padding-top: 42px;
-}
