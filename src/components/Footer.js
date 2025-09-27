@@ -11,8 +11,8 @@ const Footer = () => {
         <div className={styles.leftcontent}>
           <div className={styles.leftcontainer}>
             <div className={styles.goods}>
-              <Link to="/products">TONGARI</Link>
-              <Link to="/products">TORIPAI</Link>
+              <Link to="/tongari">TONGARI</Link>
+              <Link to="/toripai">TORIPAI</Link>
             </div>
             <div className={styles.rank}>
               <div className={styles.rankItem}>

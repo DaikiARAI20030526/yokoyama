@@ -139,7 +139,7 @@ export default function Today() {
         <p>今日のレシピ</p>
       </div>
 
-      <Link to={`/recipe/${recipe.slug}`}>
+      <Link to={`/tyogo/${recipe.slug}`}>
         <div className={styles.imgContainer}>
           <img
             src={recipe.imgUrl}
@@ -156,7 +156,7 @@ export default function Today() {
             <p className={styles.caption}>{recipe.dressingText}</p>
           </div>
           <div className={styles.right}>
-            <Link to={`/recipe/${recipe.slug}`}>
+            <Link to={`/tyogo/${recipe.slug}`}>
               <p className={styles.go}>レシピを見る→</p>
             </Link>
           </div>

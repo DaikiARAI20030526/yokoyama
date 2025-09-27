@@ -2,7 +2,7 @@
 .container {
   display: flex;
   gap: 2%;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 .backDiv a {
   color: #000;
@@ -66,7 +66,7 @@
 .right {
   width: 35%;
   overflow: visible;
-  margin-top: 30px;
+  margin-top: 43px;
 }
 .right h1{
   margin: 0 ;

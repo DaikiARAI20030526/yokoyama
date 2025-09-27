@@ -7,13 +7,13 @@ const images = [
   {
     front: "img/TONGARI正面.jpg",
     back:  "img/TONGARI成分表.jpg",
-    hover: "img/TONGARI正面（色うす）.jpg",
+    hover: "img/TONGARI正面（色薄）.jpg",
     path:  "/tongari",   // ← 追加
   },
   {
     front: "img/TORIPAI正面.jpg",
     back:  "img/TORIPAI正面.jpg",
-    hover: "img/TORIPAI正面.jpg",
+    hover: "img/TORIPAI正面（色薄）.jpg",
     path:  "/toripai",   // ← 追加
   },
 ];

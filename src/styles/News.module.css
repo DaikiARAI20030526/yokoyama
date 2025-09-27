@@ -52,21 +52,22 @@
   }
   @media screen and (max-width: 890px) {
   .newstitle{
-    font-size: 5vw;
+    font-size: 17px;
+    margin-bottom: 8px;
   }
   .left {
-    font-size: 3.5vw;
+    font-size: 14px;
     color: #666;
   }
   .right{
-    font-size: 3.5vw;
+    font-size: 14px;
     padding-left: 35px;
 }
 .newsList {
   padding-bottom: 50px;
 }
 .newstitle {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 .newsdiv {
   padding: 25px 0;                    /* 上下 45px、左右 0 */

@@ -3,7 +3,7 @@
     flex-wrap: wrap;    /* 子要素を必要に応じて折り返す */
     font-weight: bold;
     margin-top: 90px;
-    padding: 0 40px 0 20px;
+    padding: 0 4.86vw;
     gap: 60px;
   }
 

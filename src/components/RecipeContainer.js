@@ -65,6 +65,12 @@ export default function RecipeContainer() {
     const hoverUrl = hoverBlk.hoverimg?.url || ''
     const hoverText= hoverBlk.hovertext || ''
 
+    // -20度から20度の範囲でランダムな角度を生成
+    const randomAngle = Math.random() * 280 - 20;
+    const extraImgStyle = {
+      transform: `rotate(${randomAngle}deg)`,
+    };
+
     return (
       <div key={`${id}-${side}-${idx}`} className={styles.recipe}>
         <Link to={`/tyogo/${slug}`} className={styles.link}>
@@ -91,11 +97,21 @@ export default function RecipeContainer() {
 
         {/* 右列：4個ごとにとんがりボトル */}
         {side === 'right' && (idx + 1) % 4 === 0 && (
-          <img src="/img/tongari_botle.png" alt="" className={styles.extraImg} />
+          <img
+            src="/img/TONGARI正面.jpg"
+            alt=""
+            className={styles.extraImg}
+            style={extraImgStyle}
+          />
         )}
         {/* 左列：7個ごとにトリパイ */}
         {side === 'left' && (idx + 1) % 7 === 0 && (
-          <img src="/img/toripai-front.png" alt="" className={styles.extraImg} />
+          <img
+            src="/img/toripai-front.png"
+            alt=""
+            className={styles.extraImg}
+            style={extraImgStyle}
+          />
         )}
       </div>
     )

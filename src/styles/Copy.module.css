@@ -24,8 +24,9 @@
 /* 450px以下で文字サイズを40px＆マージントップを36pxに */
 @media screen and (max-width: 450px) {
   .copy {
-    font-size: 8vw;;
-    margin-top: 10px;
+    font-size: 8vw;
+    margin-top: 40px;
+    margin-bottom: 20px;
   }
 }
 

@@ -57,40 +57,39 @@ const Interview = () => {
       {/* ── 成分表パート ── */}
       <div className={styles.display}>
         <p className={styles.paragraph}>
-            ?
-          {/* 名称：乳化液状ドレッシング
+          名称:調味料
           <br />
-          原材料名：
-          <span className={styles.kodawariyanen}>豚骨スープ</span>
-          (ガラ
+          原材料名:
+          <span className={styles.kodawariyanen}>鶏白湯スープ</span>
+          (チキン
           <br />
-          スープ、本醸造醤油、食用植
+          エキス、鶏油、食塩、その他)
            <br />
-          物油脂、砂糖、その他)(国内
+          (国内製造)還元澱粉糖化物、
           <br />
-          製造)、
-          <span className={styles.kodawariyanen}>本醸造醤油</span>、
-          <span className={styles.kodawariyanen}>ニンニク</span>
+          食塩、生姜、
+          <span className={styles.kodawariyanen}>ねりごま</span>
+          /調味料
           <br />
-          /調味料(アミノ酸等)、カラ
+          (アミノ酸等)、酸味料、増粘剤
           <br />
-          メル色素、酸化防止剤(V.E),
+          <span className={styles.kerning}>(キサンタン)、ビタミンB1、(一部</span>
           <br />
-          酒精、(一部に小麦・大豆・豚
+          に鶏肉・豚肉・小麦・大豆・
           <br />
-          肉・鶏肉を含む)　内容量：
+          ごまを含む)内容量160ml
           <br />
-          160ml 賞味期限：枠外下部に
+          賞味期限:枠外下部に記載
           <br />
-          記載　保存方法：直射日光、
+          保存方法:直射日光、高温多湿
           <br />
-          高温多湿を避けて保存。
+          を避けて保存。
           <br />
-          販売者：(株)ヨコヤマ
+          販売者:(株)ヨコヤマ
           <br />
           <span className={styles.address}>東京都新宿区西早稲田3-1-6-402</span>
           <br />
-          TEL：03-4446-9067 */}
+          <span className={styles.kerning}>製造所:神奈川県鎌倉市御成町 20-5</span>
         </p>
       </div>
     </div>

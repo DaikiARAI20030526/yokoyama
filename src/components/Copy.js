@@ -3,7 +3,7 @@ import styles from "../styles/Copy.module.css"; // CSSモジュールをイン�
 
 const Copy = () => {
   return (
-    <p className={styles.copy} style={{ marginBottom: "36px" }}>
+    <p className={styles.copy} >
       かけて！煮て！<br />
       混ぜて！焼いて！<br />
       漬けて！炊いて！<br />

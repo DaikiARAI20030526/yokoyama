@@ -93,6 +93,9 @@
   .name {
     font-size: 18px;
   }
+  .title {
+    margin-bottom: 42px;
+  }
   .title p{
     font-size: 30px;
   }

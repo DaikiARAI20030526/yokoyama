@@ -33,8 +33,8 @@
   padding: 10px 0;
 }
 .goods a:hover {
-  -webkit-text-stroke: 0.3px yellow;
   text-decoration: line-through;
+  text-decoration-color: yellow;
 }
 .rank {
   display: flex;
@@ -167,7 +167,7 @@
 }
 
 /* --- レスポンシブ調整 --- */
-@media screen and (max-width: 1006px) {
+@media screen and (max-width: 1200px) {
   .footer {
     flex-direction: column;
     align-items: flex-start;
@@ -182,6 +182,12 @@
   .footertext {
     padding: 0 20px;
   }
+  .comsns {
+    margin-left: 0;
+  }
+  .cominfo {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 600px) {
   .goods {
@@ -190,8 +196,8 @@
     gap: 12px;
   }
   .rank {
-    gap: 16px;
-    padding-top: 14px;
+    gap: 9px;
+    padding-top: 10px;
   }
   .rankItem {
     width: 210px;
@@ -203,12 +209,6 @@
   .footercominfo {
     margin-top: 0;
     padding-top: 30px;
-  }
-  .comsns {
-    margin-left: 0;
-  }
-  .cominfo {
-    margin-left: 0;
   }
 }
 @media screen and (max-width: 450px) {
